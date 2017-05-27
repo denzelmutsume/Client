@@ -1,0 +1,445 @@
+UIWindow
+  id: shopWindow
+  image-source: /images//heldsmachine/heldsmachine
+  size: 277 364
+  anchors.verticalCenter: parent.verticalCenter
+  anchors.horizontalCenter: parent.horizontalCenter
+  &save: true
+  @onEscape: modules.HeldItems.hide()
+
+  ScrollablePanel
+    size: 155 228
+    id: itemsPanel
+    vertical-scrollbar: scrollBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 55
+    margin-top: 57
+
+    UIButton
+      id: 20devoted
+      image-source: /images/heldsmachine/20devoted
+      size: 149 28
+      anchors.top: parent.top
+      opacity: 0.8
+      anchors.left: parent.left
+      margin-top: 2
+      margin-left: 3
+      @onClick: modules.HeldItems.doHeldItem("20devoted")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/30dungeon
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("30dungeon")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/60dungeon
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("60dungeon")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/120dungeon
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("120dungeon")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/240dungeon
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("240dungeon")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/30underworld
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("30underworld")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/75underworld
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("75underworld")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/150underworld
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("150underworld")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/30fun
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("30fun")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/60fun
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("60fun")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/120fun
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("120fun")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/70mighty
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("70mighty")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/150mighty
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("150mighty")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/300mighty
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("300mighty")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/30honored
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("30honored")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/75honored
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("75honored")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/150honored
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("150honored")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/heldsmachine/150conqueror
+      size: 149 28
+      anchors.top: prev.bottom
+      opacity: 0.8
+      anchors.left: 20devoted.left
+      margin-top: 2
+      @onClick: modules.HeldItems.doHeldItem("150conqueror")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: itemsPanel.top
+    anchors.left: itemsPanel.right
+    anchors.bottom: itemsPanel.bottom
+    margin-left: 11
+    opacity: 0.8
+
+  Item
+    id: devoted
+    size: 16 18
+    image-source: /images/heldsmachine/devotedtoken
+    anchors.top: itemsPanel.bottom
+    anchors.left: itemsPanel.left
+    margin-left: 7
+    margin-top: 24
+    !tooltip: tr("Devoted Token")
+    opacity: 0.9
+
+  UILabel
+    id: devotedcount
+    image-color: alpha
+    font: verdana-11px-rounded
+    anchors.right: devoted.left
+    anchors.verticalCenter: devoted.verticalCenter
+    margin-top: 1
+    margin-right: 3
+    text-align: right
+    color: white
+    opacity: 0.9
+    text-auto-resize: true
+
+  Item
+    id: dungeon
+    size: 16 18
+    image-source: /images/heldsmachine/dungeontoken
+    anchors.top: devoted.top
+    anchors.left: devoted.right
+    margin-left: 44
+    !tooltip: tr("Dungeon Token")
+    opacity: 0.9
+
+  UILabel
+    id: dungeoncount
+    image-color: alpha
+    font: verdana-11px-rounded
+    anchors.right: dungeon.left
+    anchors.verticalCenter: dungeon.verticalCenter
+    margin-top: 1
+    margin-right: 3
+    text-align: right
+    color: white
+    opacity: 0.9
+    text-auto-resize: true
+
+  Item
+    id: underworld
+    size: 16 18
+    image-source: /images/heldsmachine/underworldtoken
+    anchors.top: devoted.top
+    anchors.left: dungeon.right
+    margin-left: 44
+    !tooltip: tr("Underworld Token")
+    opacity: 0.9
+
+  UILabel
+    id: underworldcount
+    image-color: alpha
+    font: verdana-11px-rounded
+    anchors.right: underworld.left
+    anchors.verticalCenter: underworld.verticalCenter
+    margin-top: 1
+    margin-right: 3
+    text-align: right
+    color: white
+    opacity: 0.9
+    text-auto-resize: true
+
+  Item
+    id: fun
+    size: 16 18
+    image-source: /images/heldsmachine/funtoken
+    anchors.top: devoted.top
+    anchors.left: underworld.right
+    margin-left: 44
+    !tooltip: tr("Fun Token")
+    opacity: 0.9
+
+  UILabel
+    id: funcount
+    image-color: alpha
+    font: verdana-11px-rounded
+    anchors.right: fun.left
+    anchors.verticalCenter: fun.verticalCenter
+    margin-top: 1
+    margin-right: 3
+    text-align: right
+    color: white
+    opacity: 0.9
+    text-auto-resize: true
+
+  Item
+    id: mighty
+    size: 16 18
+    image-source: /images/heldsmachine/mightytoken
+    anchors.top: devoted.bottom
+    anchors.left: devoted.right
+    margin-left: 15
+    margin-top: 4
+    !tooltip: tr("Mighty Token")
+    opacity: 0.9
+
+  UILabel
+    id: mightycount
+    image-color: alpha
+    font: verdana-11px-rounded
+    anchors.right: mighty.left
+    anchors.verticalCenter: mighty.verticalCenter
+    margin-top: 1
+    margin-right: 3
+    text-align: right
+    color: white
+    opacity: 0.9
+    text-auto-resize: true
+
+  Item
+    id: honored
+    size: 16 18
+    image-source: /images/heldsmachine/honoredtoken
+    anchors.top: mighty.top
+    anchors.left: mighty.right
+    margin-left: 44
+    !tooltip: tr("Honored Token")
+    opacity: 0.9
+
+  UILabel
+    id: honoredcount
+    image-color: alpha
+    font: verdana-11px-rounded
+    anchors.right: honored.left
+    anchors.verticalCenter: honored.verticalCenter
+    margin-top: 1
+    margin-right: 3
+    text-align: right
+    color: white
+    opacity: 0.9
+    text-auto-resize: true
+
+  Item
+    id: conqueror
+    size: 16 18
+    image-source: /images/heldsmachine/conquerortoken
+    anchors.top: mighty.top
+    anchors.left: honored.right
+    margin-left: 44
+    !tooltip: tr("Conqueror Token")
+    opacity: 0.9
+
+  UILabel
+    id: conquerorcount
+    image-color: alpha
+    font: verdana-11px-rounded
+    anchors.right: conqueror.left
+    anchors.verticalCenter: conqueror.verticalCenter
+    margin-top: 1
+    margin-right: 3
+    text-align: right
+    color: white
+    opacity: 0.9
+    text-auto-resize: true
+
+  UIButton
+    image-source: /images/heldsmachine/closebutton
+    size: 28 20
+    image-clip: 0 0 28 20
+    anchors.top: parent.top
+    anchors.right: parent.right
+    opacity: 0.9
+    margin-top: 20
+    margin-right: 13
+    @onClick: modules.HeldItems.hide()
+
+    $hover:
+      image-clip: 0 20 28 20
+      opacity: 1.0
+
+    $pressed:
+      image-clip: 0 40 28 20
+      opacity: 1.0

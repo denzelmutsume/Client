@@ -1,0 +1,2292 @@
+Panel
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 5
+    margin-right: 5
+
+  ScrollablePanel
+    id: pokemonMoves
+    vertical-scrollbar: scrollBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: scrollBar.left
+    anchors.bottom: parent.bottom
+
+    UIWindow
+      id: move1
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 4
+      margin-left: 4
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Quick Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-top: 3
+        margin-left: 3
+        !text: tr('Quick Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/normal
+        size: 22 22
+        !tooltip: tr('NORMAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move2
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move3
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move4
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move5
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move6
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move7
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move8
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move9
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move10
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move11
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move12
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move13
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move14
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move15
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+    UIWindow
+      id: move16
+      size: 256 34
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.left: prev.left
+
+      Item
+        id: foto
+        image-source: /images/game/pokedex/moves_icon/Sand Attack_on
+        size: 32 32
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 1
+        margin-left: 1
+        virtual: true
+
+      Label
+        id: name
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.top: parent.top
+        anchors.left: foto.right
+        text-auto-resize: true
+        margin-top: 3
+        margin-left: 3
+        text-offset: 0 1
+        !text: tr('Sand Attack')
+
+      Label
+        id: level
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        !text: tr('Level 60')
+        anchors.top: name.bottom
+        anchors.left: name.left
+        text-auto-resize: true
+        text-offset: 0 1
+
+      Label
+        id: CD
+        font: verdana-11px-rounded
+        color: white
+        text-align: left
+        anchors.bottom: foto.bottom
+        anchors.left: foto.left
+        text-auto-resize: true
+        text-offset: 0 1
+        margin-left: 3
+        !text: tr('10')
+
+      Item
+        id: tipo
+        image-source: /images/game/pokedex/elements/ground
+        size: 22 22
+        !tooltip: tr('GROUND')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        virtual: true
+
+      Item
+        id: property1
+        image-source: /images/game/pokedex/propertys/BUFF
+        size: 24 24
+        !tooltip: tr('BUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property2
+        image-source: /images/game/pokedex/propertys/BURN
+        size: 24 24
+        !tooltip: tr('BURN')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property3
+        image-source: /images/game/pokedex/propertys/DAMAGE
+        size: 24 24
+        !tooltip: tr('DAMAGE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property4
+        image-source: /images/game/pokedex/propertys/DEBUFF
+        size: 24 24
+        !tooltip: tr('DEBUFF')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.9
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property5
+        image-source: /images/game/pokedex/propertys/LIFESTEAL
+        size: 24 24
+        !tooltip: tr('LIFESTEAL')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.8
+        virtual: true
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: property6
+        image-source: /images/game/pokedex/propertys/AOE
+        size: 24 24
+        !tooltip: tr('AOE')
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: prev.left
+        margin-right: 2
+        opacity: 0.6
+        virtual: true
+        $hover:
+          opacity: 1.0

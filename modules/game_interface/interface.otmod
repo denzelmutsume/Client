@@ -1,0 +1,43 @@
+Module
+  name: game_interface
+  description: Create the game interface, where the ingame stuff starts
+  author: OTClient team
+  website: www.otclient.info
+  sandboxed: true
+  scripts: [ widgets/uigamemap, widgets/uiitem, gameinterface ]
+  load-later:
+    - game_setduel
+    - game_dpanel
+    - game_panel
+    - game_map
+    - game_loot
+    - game_dungeon
+    - game_catch
+    - game_hotkeys
+    - game_questlog
+    - game_textmessage
+    - game_console
+    - game_outfit
+    - ZShop
+    - mod_topMenu
+    - game_pokedex
+    - game_pokemon
+    - game_battle
+    - game_skills
+    - game_viplist
+    - game_inventory
+    - game_containers
+    - game_minimap
+    - game_npctrade
+    - game_textwindow
+    - game_playertrade
+    - game_bugreport
+    - game_playerdeath
+    - game_playermount
+    - game_ruleviolation
+    - game_market
+    - game_spelllist
+    - game_cooldown
+    - game_modaldialog
+  @onLoad: init()
+  @onUnload: terminate()

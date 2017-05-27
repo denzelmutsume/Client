@@ -1,0 +1,9 @@
+Module
+  name: ZShop
+  description: ZShop
+  author: Dzru
+  website: pokezworld.com
+  sandboxed: true
+  scripts: [ ZShop ]
+  @onLoad: init()
+  @onUnload: terminate()

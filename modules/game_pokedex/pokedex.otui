@@ -1,0 +1,169 @@
+PokedexListLabel < Label
+  font: verdana-11px-monochrome
+  background-color: alpha
+  text-offset: 28 0
+  focusable: true
+
+  $focus:
+    background-color: #ffffff22
+    color: #ffffff
+
+  Item
+    id: caught
+    image-source: /images/topbuttons/miniwindowicon/caughtOn
+    size: 12 12
+    !tooltip: tr('You already captured this Pokémon.')
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+
+  Item
+    id: special
+    image-source: /images/topbuttons/miniwindowicon/specialOff
+    size: 14 14
+    !tooltip: tr("This Pokémon don't have Shinys or Megas")
+    anchors.left: caught.right
+    anchors.verticalCenter: parent.verticalCenter
+    margin-left: 2
+    
+
+
+PokedexWindow < MainWindow
+  size: 711 549
+  padding: 3
+  @onClose: modules.game_pokedex.onMainWindowClose()
+
+PokedexWindow
+  id: pokedexWindow
+  @onEscape: modules.game_pokedex.hide()
+
+  PokedexTabBar
+    id: pokedexTabBar
+    size: 260 29
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    margin-top: 53
+    margin-left: 51
+
+  Panel
+    id: pokedexTabContent
+    size: 291 167
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: -3
+    focusable: false
+
+  UIWidget
+    id: pokemonImage
+    size: 199 152
+    image-source: /images/game/pokedex/none
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 121
+    margin-left: 76
+    focusable: false
+
+  UIWidget
+    id: pokemonType1
+    size: 20 20
+    anchors.top: pokemonImage.top
+    anchors.right: pokemonImage.right
+    margin-top: -13
+    margin-right: -32
+
+  UIWidget
+    id: pokemonType2
+    size: 20 20
+    anchors.top: prev.bottom
+    anchors.right: prev.right
+    margin-top: 5
+
+  TextList
+    id: pokedexList
+    size: 205 317
+    background-color: alpha
+    border-color: alpha
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 151
+    margin-right: 73
+    vertical-scrollbar: pokedexListScrollBar
+    focusable: false
+
+  VerticalScrollBar
+    id: pokedexListScrollBar
+    anchors.top: pokedexList.top
+    anchors.left: pokedexList.right
+    anchors.bottom: pokedexList.bottom
+    margin-left: 21
+    step: 14
+    pixels-scroll: true
+
+  Label
+    id: searchLabel
+    !text: tr('Search')..':'
+    anchors.top: searchText.top
+    anchors.right: searchText.left
+    margin-top: 2
+    margin-right: 7
+    text-auto-resize: true
+
+  TextEdit
+    id: searchText
+    width: 135
+    image-color: alpha
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: 34
+    margin-right: 47
+    @onTextChange: modules.game_pokedex.searchPokemon()
+
+  UIButton
+    id: closeButton
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 48
+    margin-right: 24
+    size: 38 38
+    image-source: /images/ui/dexclose
+    image-clip: 0 0 38 38
+    @onClick: modules.game_pokedex.hide()
+
+    $hover:
+      image-clip: 0 38 38 38
+
+    $pressed:
+      image-clip: 0 76 38 38
+
+  UIButton
+    id: specialButton
+    anchors.bottom: pokedexList.top
+    anchors.left: pokedexList.left
+    margin-bottom: 25
+    margin-left: -28
+    size: 143 36
+    image-source: /images/ui/specialButton
+    image-clip: 0 0 143 36
+    @onClick: modules.game_pokedex.doTransformSpecial()
+
+    $hover:
+      image-clip: 0 36 143 36
+
+    $pressed:
+      image-clip: 0 72 143 36
+
+  UIButton
+    id: changeButton
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 10
+    margin-left: 44
+    size: 32 32
+    image-source: /images/ui/changebutton
+    image-clip: 0 0 32 32
+    @onClick: modules.game_pokedex.changedex()
+
+    $hover:
+      image-clip: 0 32 32 32
+
+    $pressed:
+      image-clip: 0 64 32 32

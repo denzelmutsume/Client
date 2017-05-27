@@ -403,7 +403,8 @@ locale = {
     ["Your character mana is %d out of %d."] = "A mana do seu personagem é %d de %d.",
     ["Your connection has been lost. (err: %d)"] = "A sua conexão foi perdida. (err: %d)",
     ["Your Money"] = "Seu dinheiro",
-    ["Good Bye"] = "Até mais",
+	["You are throwing a pokemon or a bag on the ground, are you sure?"] = "Tem certeza que deseja jogar seu Pokémon ou mochila no chão?",
+	["Attention"] = "Atenção",
   }
 }
 

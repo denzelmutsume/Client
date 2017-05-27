@@ -1,0 +1,215 @@
+OptionCheckBox < CheckBox
+  @onCheckChange: modules.game_setduel.setDuelOption(self:getId(), self:isChecked())
+  height: 16
+
+  $first:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+
+  $!first:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 2
+
+MainWindow
+  id: setduelWindow
+  !text: tr('Invite Duel')
+  anchors.centerIn: parent
+  focusable: false
+  size: 325 135
+  @onEscape: modules.game_setduel.hide()
+
+  UIButton
+    id: inviteButton
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-top: 10
+    margin-right: 2
+    @onClick: modules.game_setduel.inviteDuel()
+    size: 72 40
+    image-source: /images/duel/invite
+    image-clip: 0 0 72 40
+
+    $hover:
+      image-clip: 0 40 72 40
+
+    $pressed:
+      image-clip: 0 80 72 40
+  
+  UIButton
+    id: cancelButton
+    anchors.top: inviteButton.bottom
+    anchors.horizontalCenter: inviteButton.horizontalCenter
+    margin-top: 2
+    @onClick: modules.game_setduel.hide()
+    size: 64 28
+    image-source: /images/duel/cancel
+    image-clip: 0 0 64 28
+
+    $hover:
+      image-clip: 0 28 64 28
+
+    $pressed:
+      image-clip: 0 56 64 28
+
+  UIButton
+    id: x1Button
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-top: 5
+    margin-left: 5
+    size: 51 34
+    @onClick: modules.game_setduel.setTeam(1)
+    image-source: /images/duel/1x1on
+    image-clip: 0 0 51 34
+
+    $hover:
+      image-clip: 0 34 51 34
+
+    $pressed:
+      image-clip: 0 68 51 34
+
+  UIButton
+    id: x2Button
+    anchors.left: x1Button.right
+    anchors.top: x1Button.top
+    margin-left: 5
+    size: 51 34
+    @onClick: modules.game_setduel.setTeam(2)
+    image-source: /images/duel/2x2
+    image-clip: 0 0 51 34
+
+    $hover:
+      image-clip: 0 34 51 34
+
+    $pressed:
+      image-clip: 0 68 51 34
+
+  Item
+    id: balls
+    image-color: alpha
+    anchors.top: x1Button.bottom
+    anchors.left: parent.left
+    margin-top: 15
+    virtual: true
+
+  UIButton
+    id: 1poke
+    anchors.left: balls.right
+    anchors.verticalCenter: balls.verticalCenter
+    margin-left: 2
+    margin-top: 2
+    size: 22 30
+    @onClick: modules.game_setduel.setPokes(1)
+    image-source: /images/duel/1on
+    image-clip: 0 0 22 30
+
+    $hover:
+      image-clip: 0 30 22 30
+
+    $pressed:
+      image-clip: 0 60 22 30
+
+  UIButton
+    id: 2poke
+    anchors.left: 1poke.right
+    anchors.top: 1poke.top
+    margin-left: 2
+    size: 22 30
+    @onClick: modules.game_setduel.setPokes(2)
+    image-source: /images/duel/2
+    image-clip: 0 0 22 30
+
+    $hover:
+      image-clip: 0 30 22 30
+
+    $pressed:
+      image-clip: 0 60 22 30
+
+  UIButton
+    id: 3poke
+    anchors.left: 2poke.right
+    anchors.top: 1poke.top
+    margin-left: 2
+    size: 22 30
+    @onClick: modules.game_setduel.setPokes(3)
+    image-source: /images/duel/3
+    image-clip: 0 0 22 30
+
+    $hover:
+      image-clip: 0 30 22 30
+
+    $pressed:
+      image-clip: 0 60 22 30
+
+  UIButton
+    id: 4poke
+    anchors.left: 3poke.right
+    anchors.top: 1poke.top
+    margin-left: 2
+    size: 22 30
+    @onClick: modules.game_setduel.setPokes(4)
+    image-source: /images/duel/4
+    image-clip: 0 0 22 30
+
+    $hover:
+      image-clip: 0 30 22 30
+
+    $pressed:
+      image-clip: 0 60 22 30
+
+  UIButton
+    id: 5poke
+    anchors.left: 4poke.right
+    anchors.top: 1poke.top
+    margin-left: 2
+    size: 22 30
+    @onClick: modules.game_setduel.setPokes(5)
+    image-source: /images/duel/5
+    image-clip: 0 0 22 30
+
+    $hover:
+      image-clip: 0 30 22 30
+
+    $pressed:
+      image-clip: 0 60 22 30
+
+  UIButton
+    id: 6poke
+    anchors.left: 5poke.right
+    anchors.top: 1poke.top
+    margin-left: 2
+    size: 22 30
+    @onClick: modules.game_setduel.setPokes(6)
+    image-source: /images/duel/6
+    image-clip: 0 0 22 30
+
+    $hover:
+      image-clip: 0 30 22 30
+
+    $pressed:
+      image-clip: 0 60 22 30
+
+  Panel
+    anchors.top: parent.top
+    anchors.left: x2Button.right
+    anchors.right: inviteButton.left
+    anchors.bottom: 6poke.top
+    margin-left: 10
+
+    OptionCheckBox
+      id: only1t1a
+      !text: tr('Only 1 T1A')
+      !tooltip: tr('Limit the players to only use 1 pokemon Tier 1A')
+
+    OptionCheckBox
+      id: noequals
+      !text: tr('No Equals')
+      !tooltip: tr("Limit the players to don't use same Pokemons")
+
+    OptionCheckBox
+      id: noshinys
+      !text: tr('No Shinys')
+      !tooltip: tr("Limit the players to don't use shiny Pokemons")

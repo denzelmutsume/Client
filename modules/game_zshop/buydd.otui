@@ -1,0 +1,36 @@
+MainWindow
+  id: removePasswordWindow
+  text: Adquirir Diamonds
+  size: 180 100
+  visible: false
+  Label
+    id: removePasswordLabel
+    text: Diamonds:
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 18
+    margin-top: 2
+  TextEdit
+    id: removePasswordText
+    size: 36 18
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 30
+    max-length: 3
+  Button
+    id: buttonCancel
+    text: Cancel
+    size: 66 20
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 3
+    margin-top: 34
+    @onClick: self:getParent():setVisible(false) self:getParent():getChildById('removePasswordText'):setText('')
+  Button
+    id: buttonOk
+    text: Ok
+    size: 66 20
+    anchors.top: buttonCancel.top
+    anchors.left: buttonCancel.right
+    margin-left: 10
+    @onClick: g_game.talk('/buydd ' .. self:getParent():getChildById('removePasswordText'):getText()) self:getParent():setVisible(false) self:getParent():getChildById('removePasswordText'):setText('')

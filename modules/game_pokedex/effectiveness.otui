@@ -1,0 +1,1615 @@
+Panel
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 5
+    margin-right: 5
+
+  ScrollablePanel
+    id: pokemonEffectiveness
+    vertical-scrollbar: scrollBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: scrollBar.left
+    anchors.bottom: parent.bottom
+
+    UIWindow
+      id: effectiveness1
+      size: 256 84
+      draggable: false
+      focusable: false
+      anchors.top: parent.top
+      margin-top: 8
+      anchors.horizontalCenter: parent.horizontalCenter
+
+      Item
+        id: name
+        image-source: /images/game/pokedex/eff/vweak
+        size: 158 23
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+        virtual: true
+
+      UIWindow
+        id: typesFirst
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: name.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 6
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/fire
+          size: 20 20
+          !tooltip: tr('FIRE')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+      UIWindow
+        id: typesSecond
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: typesFirst.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/grass
+          size: 20 20
+          !tooltip: tr('GRASS')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/bug
+          size: 20 20
+          !tooltip: tr('BUG')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+    UIWindow
+      id: effectiveness2
+      size: 256 84
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+
+      Item
+        id: name
+        image-source: /images/game/pokedex/eff/weak
+        size: 158 23
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+        virtual: true
+
+      UIWindow
+        id: typesFirst
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: name.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 6
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/fire
+          size: 20 20
+          !tooltip: tr('FIRE')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+      UIWindow
+        id: typesSecond
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: typesFirst.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/grass
+          size: 20 20
+          !tooltip: tr('GRASS')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/bug
+          size: 20 20
+          !tooltip: tr('BUG')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+    UIWindow
+      id: effectiveness3
+      size: 256 84
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+
+      Item
+        id: name
+        image-source: /images/game/pokedex/eff/normal
+        size: 158 23
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+        virtual: true
+
+      UIWindow
+        id: typesFirst
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: name.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 6
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/fire
+          size: 20 20
+          !tooltip: tr('FIRE')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+      UIWindow
+        id: typesSecond
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: typesFirst.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/grass
+          size: 20 20
+          !tooltip: tr('GRASS')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/bug
+          size: 20 20
+          !tooltip: tr('BUG')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+    UIWindow
+      id: effectiveness4
+      size: 256 84
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+
+      Item
+        id: name
+        image-source: /images/game/pokedex/eff/resist
+        size: 158 23
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+        virtual: true
+
+      UIWindow
+        id: typesFirst
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: name.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 6
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/fire
+          size: 20 20
+          !tooltip: tr('FIRE')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+      UIWindow
+        id: typesSecond
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: typesFirst.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/grass
+          size: 20 20
+          !tooltip: tr('GRASS')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/bug
+          size: 20 20
+          !tooltip: tr('BUG')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+    UIWindow
+      id: effectiveness5
+      size: 256 84
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+
+      Item
+        id: name
+        image-source: /images/game/pokedex/eff/vresist
+        size: 158 23
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+        virtual: true
+
+      UIWindow
+        id: typesFirst
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: name.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 6
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/fire
+          size: 20 20
+          !tooltip: tr('FIRE')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+      UIWindow
+        id: typesSecond
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: typesFirst.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/grass
+          size: 20 20
+          !tooltip: tr('GRASS')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/bug
+          size: 20 20
+          !tooltip: tr('BUG')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+    UIWindow
+      id: effectiveness6
+      size: 256 84
+      draggable: false
+      focusable: false
+      anchors.top: prev.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
+
+      Item
+        id: name
+        image-source: /images/game/pokedex/eff/imun
+        size: 158 23
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+        virtual: true
+
+      UIWindow
+        id: typesFirst
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: name.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 6
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/fire
+          size: 20 20
+          !tooltip: tr('FIRE')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+      UIWindow
+        id: typesSecond
+        size: 204 20
+        draggable: false
+        focusable: false
+        anchors.top: typesFirst.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 3
+
+        Item
+          id: tipo1
+          image-source: /images/game/pokedex/elements/grass
+          size: 20 20
+          !tooltip: tr('GRASS')
+          anchors.top: parent.top
+          anchors.left: parent.left
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo2
+          image-source: /images/game/pokedex/elements/bug
+          size: 20 20
+          !tooltip: tr('BUG')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo3
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo4
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo5
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo6
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo7
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo8
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0
+
+        Item
+          id: tipo9
+          image-source: /images/game/pokedex/elements/water
+          size: 20 20
+          !tooltip: tr('WATER')
+          anchors.top: prev.top
+          anchors.left: prev.right
+          margin-left: 3
+          virtual: true
+          opacity: 0.8
+          $hover:
+            opacity: 1.0

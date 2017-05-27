@@ -8,6 +8,7 @@ Button < UIButton
   image-clip: 0 0 20 20
   image-border: 3
   padding: 5 10 5 10
+  opacity: 1.0
 
   $hover !disabled:
     image-clip: 0 20 20 20
@@ -18,6 +19,7 @@ Button < UIButton
 
   $disabled:
     color: #5353A3
+    opacity: 0.8
 
 Button1 < UIButton
   font: verdana-11px-antialised
@@ -107,6 +109,7 @@ NextButton < UIButton
   size: 12 21
   image-source: /images/ui/arrow_horizontal
   image-clip: 12 0 12 21
+  image-color: #ffffff
 
   $hover !disabled:
     image-clip: 12 21 12 21
@@ -121,6 +124,7 @@ PreviousButton < UIButton
   size: 12 21
   image-source: /images/ui/arrow_horizontal
   image-clip: 0 0 12 21
+  image-color: #ffffff
 
   $hover !disabled:
     image-clip: 0 21 12 21

@@ -1,0 +1,9 @@
+Module
+  name: game_map
+  description: Trade Minimap
+  author: Dz
+  website: none
+  sandboxed: true
+  scripts: [ map ]
+  @onLoad: init()
+  @onUnload: terminate()

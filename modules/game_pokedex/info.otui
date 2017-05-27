@@ -1,0 +1,645 @@
+Panel
+  size: 256 600
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 5
+    margin-right: 5
+
+  ScrollablePanel
+    id: pokemonInfo
+    vertical-scrollbar: scrollBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: scrollBar.left
+    anchors.bottom: parent.bottom
+
+    Item
+      id: foto
+      size: 32 32
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 6
+      margin-left: 6
+      virtual: true
+
+    Label
+      id: name
+      font: verdana-11px-rounded
+      color: white
+      text-align: left
+      anchors.top: foto.top
+      anchors.left: foto.right
+      text-auto-resize: true
+      text-offset: 0 1
+      margin-top: 2
+      margin-left: 4
+      !text: tr('Shiny Kakunda')
+
+    Label
+      id: level
+      font: verdana-11px-rounded
+      color: white
+      text-align: left
+      anchors.bottom: foto.bottom
+      anchors.left: name.left
+      text-auto-resize: true
+      text-offset: 0 1
+      margin-bottom: 2
+      !text: tr('Level: 30')
+
+    UIWindow
+      id: abilitys
+      size: 54 82
+      draggable: false
+      focusable: false
+      anchors.top: parent.top
+      anchors.right: parent.right
+      margin-top: 6
+      margin-right: 12
+
+      Item
+        id: ab1
+        image-source: /images/game/pokedex/abilitys/CUT
+        size: 26 26
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.left: parent.left
+        virtual: true
+        opacity: 0.8
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: ab2
+        image-source: /images/game/pokedex/abilitys/ROCK SMASH
+        size: 26 26
+        !tooltip: tr('DESC')
+        anchors.top: parent.top
+        anchors.right: parent.right
+        virtual: true
+        opacity: 0.8
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: ab3
+        image-source: /images/game/pokedex/abilitys/ROCK SMASH
+        size: 26 26
+        !tooltip: tr('DESC')
+        anchors.top: ab1.bottom
+        anchors.left: parent.left
+        margin-top: 2
+        virtual: true
+        opacity: 0.8
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: ab4
+        image-source: /images/game/pokedex/abilitys/ROCK SMASH
+        size: 26 26
+        !tooltip: tr('DESC')
+        anchors.top: ab3.top
+        anchors.right: parent.right
+        virtual: true
+        opacity: 0.8
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: ab5
+        image-source: /images/game/pokedex/abilitys/ROCK SMASH
+        size: 26 26
+        !tooltip: tr('DESC')
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        virtual: true
+        opacity: 0.8
+        $hover:
+          opacity: 1.0
+
+      Item
+        id: ab6
+        image-source: /images/game/pokedex/abilitys/ROCK SMASH
+        size: 26 26
+        !tooltip: tr('DESC')
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        virtual: true
+        opacity: 0.8
+        $hover:
+          opacity: 1.0
+
+    Item
+      id: boost
+      image-source: /images/game/pokedex/info/boost
+      size: 61 24
+      anchors.top: foto.bottom
+      anchors.left: foto.left
+      margin-top: 5
+      virtual: true
+
+    Item
+      id: booststone1
+      size: 32 32
+      !tooltip: tr('DESC')
+      anchors.verticalCenter: boost.verticalCenter
+      anchors.left: prev.right
+      image-color: alpha
+      virtual: true
+      opacity: 0.8
+      $hover:
+        opacity: 1.0
+
+    Item
+      id: booststone2
+      size: 32 32
+      !tooltip: tr('DESC')
+      anchors.verticalCenter: boost.verticalCenter
+      anchors.left: prev.right
+      margin-left: -2
+      image-color: alpha
+      virtual: true
+      opacity: 0.8
+      $hover:
+        opacity: 1.0
+
+    Item
+      id: booststonevalue
+      size: 30 16
+      image-source: /images/game/pokedex/info/boosts/10
+      anchors.verticalCenter: boost.verticalCenter
+      anchors.left: prev.right
+      virtual: true
+
+    UIWindow
+      id: evolutions
+      size: 247 287
+      draggable: false
+      focusable: false
+      anchors.top: abilitys.bottom
+      margin-right: 4
+      anchors.horizontalCenter: parent.horizontalCenter
+
+      Item
+        id: image
+        image-source: /images/game/pokedex/info/evolutions
+        size: 116 24
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 5
+        virtual: true
+
+      UIWindow
+        id: evo1
+        size: 57 45
+        draggable: false
+        focusable: false
+        anchors.top: image.bottom
+        anchors.left: parent.left
+        margin-top: 5
+
+        Item
+          id: foto
+          size: 32 32
+          image-color: alpha
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          !tooltip: tr('BULBASAUR')
+          virtual: true
+
+        Label
+          id: level
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.top: foto.bottom
+          anchors.horizontalCenter: foto.horizontalCenter
+          text-auto-resize: true
+          margin-top: 2
+          text-offset: 0 1
+          !text: tr('Level: 100')
+
+      UIWindow
+        id: evo2
+        size: 57 253
+        draggable: false
+        focusable: false
+        anchors.top: image.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 5
+
+        Item
+          id: foto
+          size: 32 32
+          image-color: alpha
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          !tooltip: tr('IVYSAUR')
+          virtual: true
+
+        Label
+          id: level
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          text-auto-resize: true
+          margin-top: 2
+          text-offset: 0 1
+          !text: tr('Level: 100')
+
+        Item
+          id: foto2
+          size: 32 32
+          image-color: alpha
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          !tooltip: tr('IVYSAUR')
+          margin-top: 5
+          virtual: true
+
+        Label
+          id: level2
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          text-auto-resize: true
+          margin-top: 2
+          text-offset: 0 1
+          !text: tr('Level: 100')
+
+        Item
+          id: foto3
+          size: 32 32
+          image-color: alpha
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          !tooltip: tr('IVYSAUR')
+          margin-top: 5
+          virtual: true
+
+        Label
+          id: level3
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          text-auto-resize: true
+          margin-top: 2
+          text-offset: 0 1
+          !text: tr('Level: 100')
+
+        Item
+          id: foto4
+          size: 32 32
+          image-color: alpha
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          !tooltip: tr('IVYSAUR')
+          margin-top: 5
+          virtual: true
+
+        Label
+          id: level4
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          text-auto-resize: true
+          margin-top: 2
+          text-offset: 0 1
+          !text: tr('Level: 100')
+
+        Item
+          id: foto5
+          size: 32 32
+          image-color: alpha
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          !tooltip: tr('IVYSAUR')
+          margin-top: 5
+          virtual: true
+
+        Label
+          id: level5
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          text-auto-resize: true
+          margin-top: 2
+          text-offset: 0 1
+          !text: tr('Level: 100')
+
+      UIWindow
+        id: stones1
+        size: 60 253
+        draggable: false
+        focusable: false
+        anchors.top: prev.top
+        anchors.right: evo2.left
+        margin-top: 1
+        margin-right: -10
+
+        Item
+          id: stone1
+          size: 32 32
+          image-color: alpha
+          anchors.top: parent.top
+          anchors.left: parent.left
+          !tooltip: tr('BULBASAUR')
+          virtual: true
+
+        Label
+          id: value1
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.bottom: prev.bottom
+          anchors.right: prev.right
+          text-auto-resize: true
+          margin-bottom: 2
+          margin-right: 4
+          !text: tr('1')
+
+        Item
+          id: stone2
+          size: 32 32
+          image-color: alpha
+          anchors.top: parent.top
+          anchors.left: stone1.right
+          margin-left: -2
+          !tooltip: tr('BULBASAUR')
+          virtual: true
+
+        Label
+          id: value2
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.bottom: prev.bottom
+          anchors.right: prev.right
+          text-auto-resize: true
+          margin-bottom: 2
+          margin-right: 4
+          !text: tr('1')
+
+        Item
+          id: stone3
+          size: 32 32
+          image-color: alpha
+          anchors.top: stone2.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 22
+          !tooltip: tr('BULBASAUR')
+          virtual: true
+
+        Label
+          id: value3
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.bottom: prev.bottom
+          anchors.right: prev.right
+          text-auto-resize: true
+          margin-bottom: 2
+          margin-right: 4
+          !text: tr('1')
+
+        Item
+          id: stone4
+          size: 32 32
+          image-color: alpha
+          anchors.top: stone3.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 21
+          !tooltip: tr('BULBASAUR')
+          virtual: true
+
+        Label
+          id: value4
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.bottom: prev.bottom
+          anchors.right: prev.right
+          text-auto-resize: true
+          margin-bottom: 2
+          margin-right: 4
+          !text: tr('1')
+
+        Item
+          id: stone5
+          size: 32 32
+          image-color: alpha
+          anchors.top: stone4.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 21
+          !tooltip: tr('BULBASAUR')
+          virtual: true
+
+        Label
+          id: value5
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.bottom: prev.bottom
+          anchors.right: prev.right
+          text-auto-resize: true
+          margin-bottom: 2
+          margin-right: 4
+          !text: tr('1')
+
+        Item
+          id: stone6
+          size: 32 32
+          image-color: alpha
+          anchors.top: stone5.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 21
+          !tooltip: tr('BULBASAUR')
+          virtual: true
+
+        Label
+          id: value6
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.bottom: prev.bottom
+          anchors.right: prev.right
+          text-auto-resize: true
+          margin-bottom: 2
+          margin-right: 4
+          !text: tr('1')
+
+      UIWindow
+        id: evo3
+        size: 57 90
+        draggable: false
+        focusable: false
+        anchors.top: image.bottom
+        anchors.right: parent.right
+        margin-top: 5
+
+        Item
+          id: foto
+          size: 32 32
+          image-color: alpha
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          !tooltip: tr('VENUSAUR')
+          virtual: true
+
+        Label
+          id: level
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: foto.horizontalCenter
+          text-auto-resize: true
+          margin-top: 2
+          text-offset: 0 1
+          !text: tr('Level: 100')
+
+        Item
+          id: foto2
+          size: 32 32
+          image-color: alpha
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          !tooltip: tr('VENUSAUR')
+          margin-top: 5
+          virtual: true
+
+        Label
+          id: level2
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.top: prev.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          text-auto-resize: true
+          margin-top: 2
+          text-offset: 0 1
+          !text: tr('Level: 100')
+
+      UIWindow
+        id: stones2
+        size: 60 97
+        draggable: false
+        focusable: false
+        anchors.top: prev.top
+        anchors.right: prev.left
+        margin-top: 1
+        margin-right: -10
+
+        Item
+          id: stone1
+          size: 32 32
+          image-color: alpha
+          anchors.top: parent.top
+          anchors.left: parent.left
+          !tooltip: tr('BULBASAUR')
+          virtual: true
+
+        Label
+          id: value1
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.bottom: prev.bottom
+          anchors.right: prev.right
+          text-auto-resize: true
+          margin-bottom: 2
+          margin-right: 4
+          !text: tr('2')
+
+        Item
+          id: stone2
+          size: 32 32
+          image-color: alpha
+          anchors.top: parent.top
+          anchors.left: stone1.right
+          margin-left: -2
+          !tooltip: tr('BULBASAUR')
+          virtual: true
+
+        Label
+          id: value2
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.bottom: prev.bottom
+          anchors.right: prev.right
+          text-auto-resize: true
+          margin-bottom: 2
+          margin-right: 4
+          !text: tr('2')
+
+        Item
+          id: stone3
+          size: 32 32
+          image-color: alpha
+          anchors.top: stone2.bottom
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 22
+          !tooltip: tr('BULBASAUR')
+          virtual: true
+
+        Label
+          id: value3
+          font: verdana-11px-rounded
+          color: white
+          text-align: left
+          anchors.bottom: prev.bottom
+          anchors.right: prev.right
+          text-auto-resize: true
+          margin-bottom: 2
+          margin-right: 4
+          !text: tr('1')
+
+    UIWindow
+      id: description
+      size: 247 100
+      draggable: false
+      focusable: false
+      anchors.top: evolutions.bottom
+      margin-right: 4
+      anchors.horizontalCenter: parent.horizontalCenter
+
+      Item
+        id: image
+        image-source: /images/game/pokedex/info/description
+        size: 116 24
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 5
+        virtual: true
+
+      MultilineTextEdit
+        id: text
+        font: verdana-11px-rounded
+        color: white
+        image-color: alpha
+        anchors.top: image.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        padding: 5
+        text-wrap: true
+        editable: false
+        cursor-visible: false
+        focusable: false
+        text-align: center

@@ -1,0 +1,1010 @@
+MainWindow
+  id: panelWindow
+  focusable: false
+  size: 640 520
+  @onEscape: modules.game_panel.hide()
+
+  Item
+    id: ibagem
+    image-source: halloweenpanel
+    size: 260 440
+    anchors.left: parent.left
+    anchors.top: parent.top
+
+  Button
+    id: closeButton
+    !text: tr('Close')
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 10
+    @onClick: modules.game_panel.hide()
+
+  Button
+    id: buyButton
+    !text: tr('Buy')
+    anchors.right: closeButton.left
+    anchors.bottom: parent.bottom
+    margin-right: 22
+    @onClick: modules.game_panel.buyItem()
+
+  Panel
+    id: itemspanel
+    size: 360 440
+    anchors.right: parent.right
+    anchors.top: parent.top
+    VerticalScrollBar
+      id: scrollBar
+      step: 50
+      pixels-scroll: true
+      anchors.top: parent.top
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-top: 3
+      margin-right: 3
+      margin-bottom: 3
+
+    ScrollablePanel
+      id: itemspanel2
+      image-source: others/fundo
+      focusable: false
+      vertical-scrollbar: scrollBar
+      width: 326
+      height: 420
+      anchors.top: parent.top
+      anchors.right: scrollBar.left
+      anchors.bottom: parent.bottom
+      margin-right: 4
+
+      UIWidget
+        id: 1
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 3
+        margin-left: 3
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus1()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 1reward
+          image-color: alpha
+          !tooltip: tr('Zubat Statue')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/1A
+          anchors.top: parent.top
+          anchors.left: 1reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 1costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('10')
+          anchors.bottom: parent.bottom
+          anchors.left: 1reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 1cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 1costcount.bottom
+          anchors.left: 1costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 2
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 1.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus2()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 2reward
+          image-color: alpha
+          !tooltip: tr('Golbat Statue')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/2A
+          anchors.top: parent.top
+          anchors.left: 2reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 2costcount
+          image-color: alpha
+          !tooltip: tr('Zubat Statues')
+          !text: tr('3')
+          anchors.bottom: parent.bottom
+          anchors.left: 2reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 2cost
+          image-color: alpha
+          !tooltip: tr('Zubat Statues')
+          width: 36
+          height: 36
+          anchors.bottom: 2costcount.bottom
+          anchors.left: 2costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 3
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 2.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus3()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 3reward
+          image-color: alpha
+          !tooltip: tr('Pumpkin Lamp')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/3A
+          anchors.top: parent.top
+          anchors.left: 3reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 3costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('40')
+          anchors.bottom: parent.bottom
+          anchors.left: 3reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 3cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 3costcount.bottom
+          anchors.left: 3costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 4
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 3.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus4()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 4reward
+          image-color: alpha
+          !tooltip: tr('Skull Chair')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/4A
+          anchors.top: parent.top
+          anchors.left: 4reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 4costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('60')
+          anchors.bottom: parent.bottom
+          anchors.left: 4reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 4cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 4costcount.bottom
+          anchors.left: 4costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 5
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 4.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus5()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 5reward
+          image-color: alpha
+          !tooltip: tr('Haunted Chair')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/5A
+          anchors.top: parent.top
+          anchors.left: 5reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 5costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('60')
+          anchors.bottom: parent.bottom
+          anchors.left: 5reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 5cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 5costcount.bottom
+          anchors.left: 5costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 6
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 5.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus6()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 6reward
+          image-color: alpha
+          !tooltip: tr('Skull Mug')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/6A
+          anchors.top: parent.top
+          anchors.left: 6reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 6costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('60')
+          anchors.bottom: parent.bottom
+          anchors.left: 6reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 6cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 6costcount.bottom
+          anchors.left: 6costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 7
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 6.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus7()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 7reward
+          image-color: alpha
+          !tooltip: tr('Spider Refrigerator')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/7A
+          anchors.top: parent.top
+          anchors.left: 7reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 7costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('150')
+          anchors.bottom: parent.bottom
+          anchors.left: 7reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 7cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 7costcount.bottom
+          anchors.left: 7costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 8
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 7.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus8()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 8reward
+          image-color: alpha
+          !tooltip: tr('Blue Skull Chair')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/8A
+          anchors.top: parent.top
+          anchors.left: 8reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 8costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('100')
+          anchors.bottom: parent.bottom
+          anchors.left: 8reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 8cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 8costcount.bottom
+          anchors.left: 8costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 9
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 8.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus9()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 9reward
+          image-color: alpha
+          !tooltip: tr('Blood Nurse Costume(Female Outfit)')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/9A
+          anchors.top: parent.top
+          anchors.left: 9reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 9costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('350')
+          anchors.bottom: parent.bottom
+          anchors.left: 9reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 9cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 9costcount.bottom
+          anchors.left: 9costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 10
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 9.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus10()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 10reward
+          image-color: alpha
+          !tooltip: tr('Batgirl Costume(Female Outfit)')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/10A
+          anchors.top: parent.top
+          anchors.left: 10reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 10costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('500')
+          anchors.bottom: parent.bottom
+          anchors.left: 10reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 10cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 10costcount.bottom
+          anchors.left: 10costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 11
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 10.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus11()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 11reward
+          image-color: alpha
+          !tooltip: tr('Ghostface Costume(Male Outfit)')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/11A
+          anchors.top: parent.top
+          anchors.left: 11reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 11costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('350')
+          anchors.bottom: parent.bottom
+          anchors.left: 11reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 11cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 11costcount.bottom
+          anchors.left: 11costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 12
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 11.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus12()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 12reward
+          image-color: alpha
+          !tooltip: tr('Assassin Clown Costume(Male Outfit)')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/12A
+          anchors.top: parent.top
+          anchors.left: 12reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 12costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('500')
+          anchors.bottom: parent.bottom
+          anchors.left: 12reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 12cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 12costcount.bottom
+          anchors.left: 12costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 13
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 12.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus13()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 13reward
+          image-color: alpha
+          !tooltip: tr('Halloween Tree')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/13A
+          anchors.top: parent.top
+          anchors.left: 13reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 13costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('80')
+          anchors.bottom: parent.bottom
+          anchors.left: 13reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 13cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 13costcount.bottom
+          anchors.left: 13costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 14
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 13.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus14()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 14reward
+          image-color: alpha
+          !tooltip: tr('Halloween Plant')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/14A
+          anchors.top: parent.top
+          anchors.left: 14reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 14costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('60')
+          anchors.bottom: parent.bottom
+          anchors.left: 14reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 14cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 14costcount.bottom
+          anchors.left: 14costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 15
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 14.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus15()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 15reward
+          image-color: alpha
+          !tooltip: tr('Haunted Table')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/15A
+          anchors.top: parent.top
+          anchors.left: 15reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 15costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('80')
+          anchors.bottom: parent.bottom
+          anchors.left: 15reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 15cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 15costcount.bottom
+          anchors.left: 15costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 16
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 15.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus16()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 16reward
+          image-color: alpha
+          !tooltip: tr('Prankster Haunter')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/16A
+          anchors.top: parent.top
+          anchors.left: 16reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 16costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('100')
+          anchors.bottom: parent.bottom
+          anchors.left: 16reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 16cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 16costcount.bottom
+          anchors.left: 16costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 17
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 16.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus17()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 17reward
+          image-color: alpha
+          !tooltip: tr('Halloween Bag')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/17A
+          anchors.top: parent.top
+          anchors.left: 17reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 17costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('500')
+          anchors.bottom: parent.bottom
+          anchors.left: 17reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 17cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 17costcount.bottom
+          anchors.left: 17costcount.right
+          margin-left: -14
+          margin-bottom: -1
+
+      UIWidget
+        id: 18
+        width: 320
+        height: 68
+        anchors.top: parent.top
+        anchors.left: 1.left
+        anchors.top: 17.bottom
+        margin-top: 4
+        image-source: noproblems1
+        @onClick: modules.game_panel.iFocus18()
+
+        $!focus:
+          image-source: noproblems2
+
+        Item
+          id: 18reward
+          image-color: alpha
+          !tooltip: tr('Double EXP Star')
+          width: 50
+          height: 50
+          anchors.top: parent.top
+          anchors.left: parent.left
+          margin-top: 9
+          margin-left: 10
+
+        UIWidget
+          image-source: others/18A
+          anchors.top: parent.top
+          anchors.left: 18reward.right
+          margin-top: 8
+          margin-left: 4
+
+        Item
+          id: 18costcount
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          !text: tr('200')
+          anchors.bottom: parent.bottom
+          anchors.left: 18reward.right
+          margin-bottom: 6
+          margin-left: 14
+
+        Item
+          id: 18cost
+          image-color: alpha
+          !tooltip: tr('Halloween Candys')
+          width: 36
+          height: 36
+          anchors.bottom: 18costcount.bottom
+          anchors.left: 18costcount.right
+          margin-left: -14
+          margin-bottom: -1

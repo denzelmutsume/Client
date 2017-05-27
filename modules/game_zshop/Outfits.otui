@@ -1,0 +1,366 @@
+Panel
+  HorizontalSeparator
+    height: 7
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: -12
+
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 5
+    margin-right: 10
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: scrollBar.left
+    anchors.bottom: parent.bottom
+    margin-right: 12
+
+    ButtonShopRewards
+      id: 1
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/guitarrist
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 252
+      @onClick: modules.ZShop.sendConfirmationWindow('1', 'ZSoutfit', 'the Guitarrist Outfit', '10')
+
+    ButtonShopRewards
+      id: 2
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/playmate
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 294
+      @onClick: modules.ZShop.sendConfirmationWindow('2', 'ZSoutfit', 'the Playmate Outfit', '10')
+
+    ButtonShopRewards
+      id: 3
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/vengeance
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 336
+      @onClick: modules.ZShop.sendConfirmationWindow('3', 'ZSoutfit', 'the Vengeance Outfit', '10')
+
+    ButtonShopRewards
+      id: 4
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/doctor
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 378
+      @onClick: modules.ZShop.sendConfirmationWindow('4', 'ZSoutfit', 'the Doctor Outfit', '10')
+
+    ButtonShopRewards
+      id: 5
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/hippiefemale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 0
+      @onClick: modules.ZShop.sendConfirmationWindow('5', 'ZSoutfit', 'the Hippie Female Outfit', '6')
+
+    ButtonShopRewards
+      id: 6
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/hippiemale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 42
+      @onClick: modules.ZShop.sendConfirmationWindow('6', 'ZSoutfit', 'the Hippie Male Outfit', '6')
+
+    ButtonShopRewards
+      id: 7
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/cookiemale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 84
+      @onClick: modules.ZShop.sendConfirmationWindow('7', 'ZSoutfit', 'the Cookie Male Outfit', '8')
+
+    ButtonShopRewards
+      id: 8
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/schoolgirl
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 126
+      @onClick: modules.ZShop.sendConfirmationWindow('8', 'ZSoutfit', 'the School Girl Outfit', '8')
+
+    ButtonShopRewards
+      id: 9
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/streetfemale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 168
+      @onClick: modules.ZShop.sendConfirmationWindow('9', 'ZSoutfit', 'the Street Female Outfit', '8')
+
+    ButtonShopRewards
+      id: 10
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/orientalfighter
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 210
+      @onClick: modules.ZShop.sendConfirmationWindow('10', 'ZSoutfit', 'the Oriental Fighter Outfit', '8')
+
+    ButtonShopRewards
+      id: 11
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/meowthfemale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 420
+      @onClick: modules.ZShop.sendConfirmationWindow('11', 'ZSoutfit', 'the Meowth Female Outfit', '10')
+
+    ButtonShopRewards
+      id: 12
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/charizardmale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 462
+      @onClick: modules.ZShop.sendConfirmationWindow('12', 'ZSoutfit', 'the Charizard Male Outfit', '10')
+
+    ButtonShopRewards
+      id: 13
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/hacker
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 504
+      @onClick: modules.ZShop.sendConfirmationWindow('13', 'ZSoutfit', 'the Hacker Outfit', '10')
+
+    ButtonShopRewards
+      id: 14
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/longcapefemale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 546
+      @onClick: modules.ZShop.sendConfirmationWindow('14', 'ZSoutfit', 'the Longgape Female Outfit', '10')
+
+    ButtonShopRewards
+      id: 15
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/pikachufemale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 588
+      @onClick: modules.ZShop.sendConfirmationWindow('15', 'ZSoutfit', 'the Pikachu Female Outfit', '10')
+
+    ButtonShopRewards
+      id: 16
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/blastoisemale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 630
+      @onClick: modules.ZShop.sendConfirmationWindow('16', 'ZSoutfit', 'the Blastoise Male Outfit', '10')
+
+    ButtonShopRewards
+      id: 17
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/venusaurmale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 672
+      @onClick: modules.ZShop.sendConfirmationWindow('17', 'ZSoutfit', 'the Venusaur Outfit', '10')
+
+    ButtonShopRewards
+      id: 18
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/azumarillfemale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 714
+      @onClick: modules.ZShop.sendConfirmationWindow('18', 'ZSoutfit', 'the Azumarill Female Outfit', '10')
+
+    ButtonShopRewards
+      id: 19
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/maskedmale
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 756
+      @onClick: modules.ZShop.sendConfirmationWindow('19', 'ZSoutfit', 'the Masked Male Outfit', '10')
+
+    ButtonShopRewards
+      id: 20
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/cowgirl
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 798
+      @onClick: modules.ZShop.sendConfirmationWindow('20', 'ZSoutfit', 'the Cowgirl Outfit', '12')
+
+    ButtonShopRewards
+      id: 21
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/surgeonofdeath
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 840
+      @onClick: modules.ZShop.sendConfirmationWindow('21', 'ZSoutfit', 'the Surgeon of Death Outfit', '12')
+
+    ButtonShopRewards
+      id: 22
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/piratelady
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 882
+      @onClick: modules.ZShop.sendConfirmationWindow('22', 'ZSoutfit', 'the Pirate Lady Outfit', '12')
+
+    ButtonShopRewards
+      id: 23
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/karate
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 924
+      @onClick: modules.ZShop.sendConfirmationWindow('23', 'ZSoutfit', 'the Karate Outfit', '12')
+
+    ButtonShopRewards
+      id: 24
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/dragontamer
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 966
+      @onClick: modules.ZShop.sendConfirmationWindow('24', 'ZSoutfit', 'the Dragon Tamer Outfit', '12')
+
+    ButtonShopRewards
+      id: 25
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/grandma
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 1008
+      @onClick: modules.ZShop.sendConfirmationWindow('25', 'ZSoutfit', 'the Grandma Outfit', '12')
+
+    ButtonShopRewards
+      id: 26
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/streetfighter
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 1050
+      @onClick: modules.ZShop.sendConfirmationWindow('26', 'ZSoutfit', 'the Street Fighter Outfit', '14')
+
+    ButtonShopRewards
+      id: 27
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/boss
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 1092
+      @onClick: modules.ZShop.sendConfirmationWindow('27', 'ZSoutfit', 'the Boss Outfit', '14')
+
+    ButtonShopRewards
+      id: 28
+      !tooltip: tr('Male Outfit')
+      image-source: /images/zshop/rewards/outfits/celestial
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 1134
+      @onClick: modules.ZShop.sendConfirmationWindow('28', 'ZSoutfit', 'the Celestial Outfit', '14')
+
+    ButtonShopRewards
+      id: 29
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/snakeprincess
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 1176
+      @onClick: modules.ZShop.sendConfirmationWindow('29', 'ZSoutfit', 'the Snake Princess Outfit', '14')
+
+    ButtonShopRewards
+      id: 30
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/bikini
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 1218
+      @onClick: modules.ZShop.sendConfirmationWindow('30', 'ZSoutfit', 'the Bikini Outfit', '14')
+
+    ButtonShopRewards
+      id: 31
+      !tooltip: tr('Female Outfit')
+      image-source: /images/zshop/rewards/outfits/sunny
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 1260
+      @onClick: modules.ZShop.sendConfirmationWindow('31', 'ZSoutfit', 'the Sunny Outfit', '14')

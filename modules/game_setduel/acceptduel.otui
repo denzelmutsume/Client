@@ -1,0 +1,43 @@
+MainWindow
+  id: acceptduelWindow
+  !text: tr('Accept Duel')
+  anchors.centerIn: parent
+  focusable: false
+  size: 580 135
+  @onEscape: modules.game_setduel.hideAccept()
+
+  Label
+    id: duelMessage
+    font: verdana-11px-monochrome
+    !text: tr("Teste")
+    text-align: center
+    anchors.top: parent.top
+    text-auto-resize: true
+    text-offset: 0 1
+    anchors.horizontalCenter: parent.horizontalCenter
+    background-color: alpha
+
+  Label
+    id: midlane
+    text-align: center
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    phantom: true
+
+  Button
+    id: acceptDuelButton
+    !text: tr('Accept')
+    width: 64
+    anchors.right: midlane.left
+    anchors.bottom: parent.bottom
+    margin-right: 5
+    @onClick: modules.game_setduel.acceptDuel()
+
+  Button
+    id: refuseDuelButton
+    !text: tr('Refuse')
+    width: 64
+    anchors.left: midlane.right
+    anchors.bottom: acceptDuelButton.bottom
+    margin-left: 5
+    @onClick: modules.game_setduel.refuseDuel()

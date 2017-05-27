@@ -1,0 +1,18 @@
+MainWindow
+  image-source: /images/ui/trademap
+  id: mapWindow
+  focusable: false
+  size: 470 565
+  @onEscape: modules.game_map.hide()
+
+
+  Button
+    id: closeButtom
+    !text: tr('Close')
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-left: 5
+    margin-right: 380
+    margin-top: 5
+    @onClick: modules.game_map.hide()

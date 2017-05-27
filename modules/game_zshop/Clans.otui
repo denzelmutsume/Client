@@ -1,0 +1,246 @@
+UIWindow
+  id: changeClanWindow
+  focusable: false
+  image-source: /images/zshop/changeclanbase
+  !text: tr('')
+  size: 524 202
+  anchors.verticalCenter: parent.verticalCenter
+  anchors.horizontalCenter: parent.horizontalCenter
+  &save: true
+
+  ScrollablePanel
+    id: clans
+    size: 250 100
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 60
+    margin-left: 18
+
+    UIWidget
+      id: volcanic
+      size: 50 50
+      image-source: /images/zshop/clanIcons/volcanicOff
+      !tooltip: tr('VOLCANIC')
+      anchors.top: parent.top
+      anchors.left: parent.left
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        image-source: /images/zshop/clanIcons/volcanic
+        opacity: 1.0
+
+    UIWidget
+      id: seavell
+      size: 50 50
+      image-source: /images/zshop/clanIcons/seavellOff
+      !tooltip: tr('SEAVELL')
+      anchors.top: parent.top
+      anchors.left: prev.right
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        image-source: /images/zshop/clanIcons/seavell
+        opacity: 1.0
+
+    UIWidget
+      id: naturia
+      size: 50 50
+      image-source: /images/zshop/clanIcons/naturiaOff
+      !tooltip: tr('NATURIA')
+      anchors.top: parent.top
+      anchors.left: prev.right
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        image-source: /images/zshop/clanIcons/naturia
+        opacity: 1.0
+
+    UIWidget
+      id: raibolt
+      size: 50 50
+      image-source: /images/zshop/clanIcons/raiboltOff
+      !tooltip: tr('RAIBOLT')
+      anchors.top: parent.top
+      anchors.left: prev.right
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        image-source: /images/zshop/clanIcons/raibolt
+        opacity: 1.0
+
+    UIWidget
+      id: gardestrike
+      size: 50 50
+      image-source: /images/zshop/clanIcons/gardestrikeOff
+      !tooltip: tr('GARDESTRIKE')
+      anchors.top: parent.top
+      anchors.left: prev.right
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        image-source: /images/zshop/clanIcons/gardestrike
+        opacity: 1.0
+
+    UIWidget
+      id: malefic
+      size: 50 50
+      image-source: /images/zshop/clanIcons/maleficOff
+      !tooltip: tr('MALEFIC')
+      anchors.top: prev.bottom
+      anchors.left: volcanic.left
+      margin-left: 25
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        image-source: /images/zshop/clanIcons/malefic
+        opacity: 1.0
+
+    UIWidget
+      id: psycraft
+      size: 50 50
+      image-source: /images/zshop/clanIcons/psycraftOff
+      !tooltip: tr('PSYCRAFT')
+      anchors.top: malefic.top
+      anchors.left: prev.right
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        image-source: /images/zshop/clanIcons/psycraft
+        opacity: 1.0
+
+    UIWidget
+      id: orebound
+      size: 50 50
+      image-source: /images/zshop/clanIcons/oreboundOff
+      !tooltip: tr('OREBOUND')
+      anchors.top: malefic.top
+      anchors.left: prev.right
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        image-source: /images/zshop/clanIcons/orebound
+        opacity: 1.0
+
+    UIWidget
+      id: wingeon
+      size: 50 50
+      image-source: /images/zshop/clanIcons/wingeonOff
+      !tooltip: tr('WINGEON')
+      anchors.top: malefic.top
+      anchors.left: prev.right
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        image-source: /images/zshop/clanIcons/wingeon
+        opacity: 1.0
+
+  ScrollablePanel
+    id: ranks
+    size: 140 41
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 69
+    margin-right: 57
+
+    UIWidget
+      id: rank1
+      size: 35 41
+      image-source: /images/zshop/r1
+      anchors.top: parent.top
+      anchors.left: parent.left
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        opacity: 1.0
+
+    UIWidget
+      id: rank2
+      size: 35 41
+      image-source: /images/zshop/r2
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 1
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        opacity: 1.0
+
+    UIWidget
+      id: rank3
+      size: 35 41
+      image-source: /images/zshop/r3
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 1
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        opacity: 1.0
+
+    UIWidget
+      id: rank4
+      size: 35 41
+      image-source: /images/zshop/r4
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 1
+      opacity: 0.7
+      $hover:
+        opacity: 0.9
+      $focus:
+        opacity: 1.0
+
+  Button
+    id: cancelButton
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: 30
+    margin-right: 50
+    !text: tr('Cancel')
+    width: 55
+    @onClick: modules.ZShop.hideChangeClan()
+
+  Button
+    id: changeClanButton
+    anchors.bottom: cancelButton.bottom
+    anchors.right: cancelButton.left
+    margin-right: 7
+    !text: tr('Change Clan')
+    color: green
+    width: 90
+    @onClick: modules.ZShop.changeClanButton()
+
+  Item
+    id: costDDs
+    image-source: /images/zshop/dds
+    size: 22 22
+    anchors.bottom: cancelButton.top
+    anchors.right: cancelButton.left
+    margin-bottom: 6
+    margin-right: -10
+    virtual: true
+
+  Label
+    id: costValue
+    font: verdana-11px-rounded
+    color: white
+    text-align: right
+    text-auto-resize: true
+    text-offset: 0 1
+    !text: tr('40')
+    anchors.verticalCenter: costDDs.verticalCenter
+    anchors.right: costDDs.left
+    margin-top: 1
+    margin-left: 1

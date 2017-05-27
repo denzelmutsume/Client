@@ -1,0 +1,40 @@
+Panel
+  HorizontalSeparator
+    height: 7
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: -12
+
+  VerticalScrollBar
+    id: scrollBar
+    step: 20
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 60
+    margin-bottom: 25
+    margin-top: 0
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: scrollBar.left
+    anchors.bottom: parent.bottom
+    margin-left: 25
+    margin-right: 2
+    margin-bottom: 25
+    margin-top: 0
+
+    Button1
+      id: 1
+      !tooltip: tr('Seavell')
+      image-source: /images/shop/clan5/1
+      width: 415
+      height: 48
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 0
+      @onClick: g_game.talk("/clan seavell,5")

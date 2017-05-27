@@ -1,0 +1,9 @@
+Module
+  name: game_setduel
+  description: Duel Invite
+  author: Dz
+  website: none
+  sandboxed: true
+  scripts: [ setduel ]
+  @onLoad: init()
+  @onUnload: terminate()

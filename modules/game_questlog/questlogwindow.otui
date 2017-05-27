@@ -1,0 +1,87 @@
+QuestLabel < Label
+  font: verdana-11px-rounded
+  text-offset: 2 0
+  focusable: true
+  opacity: 1
+  background-color: alpha
+
+  $focus:
+    background-color: #90bea7
+
+QuestLogWindow < UIWindow
+  id: questLogWindow
+  image-source: /images/zquestlog/questlog
+  size: 262 359
+  @onEscape: self:destroy()
+  anchors.centerIn: parent
+
+  UIButton
+    id: closeButton
+    image-source: /images/zquestlog/closebutton
+    size: 48 47
+    image-clip: 0 0 48 47
+    anchors.top: parent.top
+    anchors.right: parent.right
+    @onClick: modules.game_questlog.destroyWindows()
+
+    $hover:
+      image-clip: 0 47 48 47
+
+    $pressed:
+      image-clip: 0 94 48 47
+
+  UIScrollArea
+    layout: verticalBox
+    padding: 1
+    auto-focus: none
+    id: questList
+    size: 211 179
+    anchors.top: closeButton.bottom
+    anchors.left: parent.left
+    margin-top: 7
+    margin-left: 13
+    margin-right: 30
+    focusable: false
+    vertical-scrollbar: questListScrollBar
+
+  VerticalScrollBar
+    id: questListScrollBar
+    anchors.top: questList.top
+    anchors.bottom: questList.bottom
+    anchors.left: questList.right
+    margin-top: 5
+    margin-left: 11
+    margin-bottom: 5
+    step: 14
+    pixels-scroll: true
+
+  UITextEdit
+    id: questInfo
+    color-background: alpha
+    anchors.top: questList.bottom
+    anchors.bottom: parent.bottom
+    anchors.right: questList.right
+    anchors.left: questList.left
+    font: verdana-11px-rounded
+    color: #fcf9f3
+    margin-top: 17
+    margin-right: 9
+    margin-bottom: 13
+    vertical-scrollbar: questInfoScrollBar
+    text-wrap: true
+    editable: false
+    cursor-visible: false
+    focusable: false
+    text-offset: 0 3
+    padding: 3
+
+  VerticalScrollBar
+    id: questInfoScrollBar
+    anchors.top: questInfo.top
+    anchors.left: questInfo.right
+    anchors.bottom: questInfo.bottom
+    margin-top: -4
+    margin-left: 3
+    margin-bottom: -4
+    step: 14
+    pixels-scroll: true

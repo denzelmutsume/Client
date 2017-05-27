@@ -1,0 +1,102 @@
+Panel
+  HorizontalSeparator
+    height: 7
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: -12
+
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 5
+    margin-right: 10
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: scrollBar.left
+    anchors.bottom: parent.bottom
+    margin-right: 12
+
+    ButtonShopRewards
+      id: 1
+      !tooltip: tr('10 Z Balls que possuem um grande poder para capturar Pokemons!')
+      image-source: /images/zshop/rewards/10zball
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 0
+      @onClick: modules.ZShop.sendConfirmationWindow('10zb', 'buy', '10 Z Balls', '1')
+
+    ButtonShopRewards
+      id: 2
+      !tooltip: tr('100 Z Balls que possuem um grande poder para capturar Pokemons!')
+      image-source: /images/zshop/rewards/100zball
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 42
+      @onClick: modules.ZShop.sendConfirmationWindow('100zb', 'buy', '100 Z Balls', '8')
+
+    ButtonShopRewards
+      id: 3
+      !tooltip: tr('Ditto é capaz de copiar outros Pokemons e suas habilidades ficando 30º/o mais fraco do que o Pokemon original')
+      image-source: /images/zshop/rewards/ditto
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 210
+      @onClick: modules.ZShop.sendConfirmationWindow('ditto', 'buy', 'a Ditto', '10')
+
+    ButtonShopRewards
+      id: 4
+      !tooltip: tr('Shiny Ditto é capaz de copiar outros Pokemons e suas habilidades ficando 12º/o mais fraco do que o Pokemon original')
+      image-source: /images/zshop/rewards/sditto
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 252
+      @onClick: modules.ZShop.sendConfirmationWindow('sditto', 'buy', 'a Shiny Ditto', '80')
+
+    ButtonShopRewards
+      id: 5
+      !tooltip: tr('Tickets que possibilitam entrar denovo em Bronze Dungeons sem ter que esperar')
+      image-source: /images/zshop/rewards/ticket1
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 84
+      @onClick: modules.ZShop.sendConfirmationWindow('bronzedgticket', 'buy', '10 Bronze Tickets', '2')
+
+    ButtonShopRewards
+      id: 6
+      !tooltip: tr('Tickets que possibilitam entrar denovo em Silver Dungeons sem ter que esperar')
+      image-source: /images/zshop/rewards/ticket2
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 126
+      @onClick: modules.ZShop.sendConfirmationWindow('silverdgticket', 'buy', '10 Silver Tickets', '5')
+
+    ButtonShopRewards
+      id: 7
+      !tooltip: tr('Tickets que possibilitam entrar denovo em Gold Dungeons sem ter que esperar')
+      image-source: /images/zshop/rewards/ticket3
+      width: 222
+      height: 40
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 168
+      @onClick: modules.ZShop.sendConfirmationWindow('golddgticket', 'buy', '10 Gold Tickets', '10')

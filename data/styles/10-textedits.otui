@@ -3,6 +3,7 @@ TextEdit < UITextEdit
   color: #aaaaaa
   size: 86 20
   text-offset: 0 3
+  opacity: 1
   padding: 3
   image-source: /images/ui/textedit
   image-border: 5
@@ -10,6 +11,7 @@ TextEdit < UITextEdit
   selection-background-color: #999999
   $disabled:
     color: #aaaaaa88
+    opacity: 0.5
 
 PasswordTextEdit < TextEdit
   text-hidden: true

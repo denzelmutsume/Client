@@ -1,0 +1,21 @@
+MainWindow
+  id: oldverWindow
+  focusable: true
+  size: 680 100
+
+  Label
+    id: text
+    color: red
+    text-align: center
+    anchors.top: parent.top
+    text-auto-resize: true
+    text-offset: 0 1
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: -4
+
+  Button
+    id: closeButton
+    !text: tr('Ok')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_oldver.hide()

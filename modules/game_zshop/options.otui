@@ -1,0 +1,118 @@
+LocalesButtons < UIWidget
+  image-size: 250 50
+  image-smooth: true
+  image-clip: 0 250 250 50
+  anchors.horizontalCenter: parent.horizontalCenter
+  anchors.verticalCenter: parent.verticalCenter
+  margin-top: -160
+  
+OptionCheckBox < CheckBox
+  @onCheckChange: modules.client_options.setOption(self:getId(), self:isChecked())
+  height: 16
+
+  $first:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+
+  $!first:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 10
+
+OptionScrollbar < HorizontalScrollBar
+  step: 1
+  @onValueChange: modules.client_options.setOption(self:getId(), self:getValue())
+
+UIWindow
+  id: shopWindow
+  focusable: false
+  image-source: /images/zshop/background
+  !text: tr('')
+  size: 394 396
+  anchors.verticalCenter: parent.verticalCenter
+  anchors.horizontalCenter: parent.horizontalCenter
+  @onClose: modules.ZShop.onMainWindowClose()
+  &save: true
+
+  UIButton
+    id: ddButton
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-bottom: 12
+    margin-left: 30
+    size: 76 28
+    image-source: /images/zshop/convertButton
+    @onClick: modules.ZShop.buydd()
+
+    $hover:
+      image-source: /images/zshop/convertButton1
+
+    $pressed:
+      image-source: /images/zshop/convertButton1
+
+  TabBar1Vertical
+    id: optionsTabBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.bottom: ddButton.top
+    margin-top: 74
+    margin-left: 8
+    margin-bottom: 8
+
+  Panel1
+    id: optionsTabContent
+    anchors.top: optionsTabBar.top
+    anchors.left: optionsTabBar.right
+    anchors.bottom: optionsTabBar.bottom
+    anchors.right: parent.right
+    margin-top: 8
+    margin-left: 11
+    margin-bottom: 17
+
+  Item
+    id: ibagem
+    image-source: /images/zshop/zpoints
+    margin-right: 50
+    margin-bottom: 0
+    anchors.right: parent.right
+    anchors.bottom: ddButton.bottom
+
+  Item
+    id: count1
+    image-color: alpha
+    margin-bottom: 0
+    anchors.right: parent.right
+    anchors.bottom: ddButton.bottom
+
+  Item
+    id: diamond
+    image-color: alpha
+    margin-right: 130
+    margin-bottom: 0
+    anchors.right: parent.right
+    anchors.bottom: ddButton.bottom
+
+  Item
+    id: count2
+    image-color: alpha
+    margin-bottom: 0
+    anchors.right: parent.right
+    anchors.bottom: ddButton.bottom
+
+  UIButton
+    image-source: /images/zshop/closeButton
+    size: 49 50
+    image-clip: 0 0 49 50
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 7
+    margin-right: 7
+    @onClick: modules.ZShop.hide()
+
+    $hover:
+      image-clip: 0 50 49 50
+
+    $pressed:
+      image-clip: 0 100 49 50

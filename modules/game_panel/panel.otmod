@@ -1,0 +1,9 @@
+Module
+  name: game_panel
+  description: Items Panel
+  author: Dz
+  website: none
+  sandboxed: true
+  scripts: [ panel ]
+  @onLoad: init()
+  @onUnload: terminate()
