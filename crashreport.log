@@ -1,0 +1,52 @@
+== application crashed
+app name: OTClient
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: May 20 2017
+build type: Release
+build revision: 0 (devel)
+crash date: May 21 2017 06:04:40
+exception: Access violation (0xc0000005)
+exception address: 0x006592ea
+  backtrace:
+    0: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x1892da) [0x00000000006592EA]
+    1: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x17077f) [0x000000000064078F]
+    2: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x23690e) [0x000000000070691E]
+    3: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x1f44a8) [0x00000000006C44B8]
+    4: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x1fa35f) [0x00000000006CA36F]
+    5: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe [0x0000000000458514]
+    6: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x3650b) [0x000000000050651B]
+    7: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x3694c) [0x000000000050695C]
+    8: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x3e047) [0x000000000050E057]
+    9: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x3f532) [0x000000000050F542]
+    10: C:\WINDOWS\SYSTEM32\ntdll.dll(RtlAllocateHeap+0x10c) [0x00000000778A5C0C]
+    11: C:\WINDOWS\System32\msvcrt.dll(malloc+0x90) [0x00000000747279B0]
+    12: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x36990) [0x00000000005069A0]
+    13: C:\WINDOWS\SYSTEM32\ntdll.dll(RtlAllocateHeap+0x10c) [0x00000000778A5C0C]
+
+== application crashed
+app name: OTClient
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: May 20 2017
+build type: Release
+build revision: 0 (devel)
+crash date: May 21 2017 06:05:53
+exception: Access violation (0xc0000005)
+exception address: 0x006592ea
+  backtrace:
+    0: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x1892da) [0x00000000006592EA]
+    1: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x17077f) [0x000000000064078F]
+    2: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x23690e) [0x000000000070691E]
+    3: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x1f44a8) [0x00000000006C44B8]
+    4: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x1fa35f) [0x00000000006CA36F]
+    5: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe [0x0000000000458514]
+    6: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x3650b) [0x000000000050651B]
+    7: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x3694c) [0x000000000050695C]
+    8: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x3e047) [0x000000000050E057]
+    9: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x3f532) [0x000000000050F542]
+    10: C:\WINDOWS\SYSTEM32\ntdll.dll(RtlAllocateHeap+0x10c) [0x00000000778A5C0C]
+    11: C:\WINDOWS\System32\msvcrt.dll(malloc+0x90) [0x00000000747279B0]
+    12: C:\tudo\serverzeras\otclient-0.6.6\otclient3 Dx9.exe(alGetListeneriv+0x36990) [0x00000000005069A0]
+    13: C:\WINDOWS\SYSTEM32\ntdll.dll(RtlAllocateHeap+0x10c) [0x00000000778A5C0C]
+
