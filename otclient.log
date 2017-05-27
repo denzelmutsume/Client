@@ -226,3 +226,4 @@ stack traceback:
 	/game_dpanel/dpanel.lua:214: in function 'show'
 	/game_dpanel/dpanel.lua:6: in function 'callback'
 	/gamelib/protocolgame.lua:17: in function </gamelib/protocolgame.lua:14>
+ERROR: Unable to load texture '/images/game/pokedex/moves_icon/Raging Blast_on.png': unable to open file '/images/game/pokedex/moves_icon/Raging Blast_on.png': O sistema não pode encontrar o caminho especificado.
