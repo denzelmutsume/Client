@@ -89,6 +89,9 @@ function displayMessage(mode, text)
   end
 
   if msgtype.screenTarget then
+    if string.find(text, '12//,') or string.find(text, '12|,') or string.find(text, 'p#,') or string.find(text, '12&,') or string.find(text, '#ph#,') then
+		return
+    end   
     local label = messagesPanel:recursiveGetChildById(msgtype.screenTarget)
     label:setText(text)
     label:setColor(msgtype.color)

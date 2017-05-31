@@ -1,7 +1,7 @@
 local defaultOptions = {
   vsync = false,
   showFps = false,
-  showPing = false,
+ -- showPing = false,
   fullscreen = false,
   classicControl = true,
   smartWalk = false,
@@ -204,8 +204,8 @@ function setOption(key, value, force)
     g_window.setVerticalSync(value)
   elseif key == 'showFps' then
     modules.client_topmenu.setFpsVisible(value)
-  elseif key == 'showPing' then
-    modules.client_topmenu.setPingVisible(value)
+ --[[ elseif key == 'showPing' then
+    modules.client_topmenu.setPingVisible(value)]]
   elseif key == 'fullscreen' then
     g_window.setFullscreen(value)
   elseif key == 'enableAudio' then

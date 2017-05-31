@@ -14,8 +14,6 @@ sortOrderBox = nil
 hidePlayersButton = nil
 hideNPCsButton = nil
 hideMonstersButton = nil
-hideSkullsButton = nil
-hidePartyButton = nil
 
 function init()
   g_ui.importStyle('battlebutton')
@@ -42,8 +40,6 @@ function init()
   hidePlayersButton = battleWindow:recursiveGetChildById('hidePlayers')
   hideNPCsButton = battleWindow:recursiveGetChildById('hideNPCs')
   hideMonstersButton = battleWindow:recursiveGetChildById('hideMonsters')
-  hideSkullsButton = battleWindow:recursiveGetChildById('hideSkulls')
-  hidePartyButton = battleWindow:recursiveGetChildById('hideParty')
 
   mouseWidget = g_ui.createWidget('UIButton')
   mouseWidget:setVisible(false)
@@ -248,18 +244,12 @@ function doCreatureFitFilters(creature)
   local hidePlayers = hidePlayersButton:isChecked()
   local hideNPCs = hideNPCsButton:isChecked()
   local hideMonsters = hideMonstersButton:isChecked()
-  local hideSkulls = hideSkullsButton:isChecked()
-  local hideParty = hidePartyButton:isChecked()
 
   if hidePlayers and creature:isPlayer() then
     return false
   elseif hideNPCs and creature:isNpc() then
     return false
   elseif hideMonsters and creature:isMonster() then
-    return false
-  elseif hideSkulls and creature:isPlayer() and creature:getSkull() == SkullNone then
-    return false
-  elseif hideParty and creature:getShield() > ShieldWhiteBlue then
     return false
   end
 

@@ -189,7 +189,7 @@ MiniWindow
       id: dungeonpoints
       height: 15
       SkillNameLabel
-        !text: tr('Dungeon Points')
+        !text: tr('Dungeon Coins')
       SkillValueLabel
 
     SkillButton

@@ -58,7 +58,6 @@ function UIGameMap:onDrop(widget, mousePos)
 	frombag = false
   end
 
-	print("X: ".. thingPos.x .." Y: "..thingPos.y .." Z: "..thingPos.z)
   if thing:isItem() and thing:getCount() > 1 then
     modules.game_interface.moveStackableItem(thing, toPos)
   elseif frombag and (thing:isContainer() or isP(thing:getId())) then

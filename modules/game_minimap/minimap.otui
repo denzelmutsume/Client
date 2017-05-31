@@ -91,7 +91,7 @@ TPLabelText < Label
   
 Button < UIButton
   font: verdana-11px-antialised
-  color: #8080FF
+  color: #dfdfdf
   size: 64 20
   text-offset: 0 0
   image-source: /images/ui/button_rounded
@@ -102,10 +102,12 @@ Button < UIButton
 
   $hover !disabled:
     image-clip: 0 20 20 20
+    color: white
 
   $pressed:
     image-clip: 0 40 20 20
     text-offset: 1 1
+    color: #dfdfdf
 
   $disabled:
     color: #5353A3

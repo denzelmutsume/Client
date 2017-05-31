@@ -296,6 +296,7 @@ function UIMinimap:onMouseRelease(pos, button)
   elseif button == MouseRightButton then
     local menu = g_ui.createWidget('PopupMenu')
     menu:addOption(tr('Create mark'), function() self:createFlagWindow(mapPos) end)
+    menu:addOption(modules.game_minimap.fullmapView and tr('Normal Map(Ctrl+Tab)') or tr('Full Map(Ctrl+Tab)'), function() g_game.talk('/togglemap') end)
     menu:display(pos)
     return true
   end

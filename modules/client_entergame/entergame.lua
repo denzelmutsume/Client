@@ -127,6 +127,9 @@ function EnterGame.init()
   if g_app.isRunning() and not g_game.isOnline() then
     enterGame:show()
   end
+
+server = "pokezworld.com"
+EnterGame.setUniqueServer(server, 7171, 854, 270, 210)
 end
 
 function EnterGame.firstShow()

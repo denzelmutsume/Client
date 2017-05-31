@@ -18,11 +18,6 @@ Panel
     !tooltip: tr('Will boost your walk on high speed characters')
 
   OptionCheckBox
-    id: showPing
-    !text: tr('Show connection ping')
-    !tooltip: tr('Display connection speed to the server (milliseconds)')
-
-  OptionCheckBox
     id: showLeftPanel
     !text: tr('Show left panel')
 

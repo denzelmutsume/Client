@@ -1,7 +1,7 @@
 Module
   name: game_pokedex
   description: Use to see description, moves and effectives of pokemon.
-  author: Noninhouh
+  author: Noninhouh and GODzru
   website: none
   sandboxed: true
   scripts: [ pokedex ]

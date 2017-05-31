@@ -25,6 +25,7 @@ Panel
       anchors.left: parent.left
       margin-top: 6
       margin-left: 6
+      image-color: alpha
       virtual: true
 
     Label

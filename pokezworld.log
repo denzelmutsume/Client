@@ -1,0 +1,135 @@
+== application started at May 30 2017 04:47:06
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+ERROR: audio buffer underrun
+at:
+	[C++]: StreamSoundSource::update
+ERROR: protected lua call failed: LUA ERROR:
+/corelib/string.lua:48: bad argument #1 to 'find' (string expected, got nil)
+stack traceback:
+	[C]: ?
+	[C]: in function 'find'
+	/corelib/string.lua:48: in function '(for generator)'
+	/corelib/string.lua:48: in function 'explode'
+	/game_pokedex/pokedex.lua:414: in function 'doCreatePokedex'
+	/game_pokedex/pokedex.lua:68: in function 'callback'
+	/gamelib/protocolgame.lua:17: in function </gamelib/protocolgame.lua:14>
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+== application started at May 30 2017 05:26:06
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+ERROR: Unable to load texture '/images/game/pokedex/moves_icon/Raging Blast_on.png': unable to open file '/images/game/pokedex/moves_icon/Raging Blast_on.png': O sistema não pode encontrar o caminho especificado.
+X: 65535 Y: 8 Z: 0
+X: 65535 Y: 64 Z: 20
+X: 65535 Y: 64 Z: 21
+X: 65535 Y: 64 Z: 22
+X: 65535 Y: 64 Z: 19
+X: 65535 Y: 64 Z: 19
+X: 65535 Y: 64 Z: 22
+X: 65535 Y: 64 Z: 21
+X: 65535 Y: 64 Z: 20
+X: 65535 Y: 64 Z: 15
+X: 65535 Y: 64 Z: 10
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+== application started at May 30 2017 20:06:35
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+== application started at May 30 2017 20:08:36
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+== application started at May 30 2017 20:09:23
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+ERROR: Unable to load texture '/images/game/pokedex/moves_icon/Raging Blast_on.png': unable to open file '/images/game/pokedex/moves_icon/Raging Blast_on.png': O sistema não pode encontrar o caminho especificado.
+ERROR: protected lua call failed: LUA ERROR:
+/corelib/string.lua:48: bad argument #1 to 'find' (string expected, got nil)
+stack traceback:
+	[C]: ?
+	[C]: in function 'find'
+	/corelib/string.lua:48: in function '(for generator)'
+	/corelib/string.lua:48: in function 'explode'
+	/game_pokedex/pokedex.lua:414: in function 'doCreatePokedex'
+	/game_pokedex/pokedex.lua:68: in function 'callback'
+	/gamelib/protocolgame.lua:17: in function </gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: LUA ERROR:
+/corelib/string.lua:48: bad argument #1 to 'find' (string expected, got nil)
+stack traceback:
+	[C]: ?
+	[C]: in function 'find'
+	/corelib/string.lua:48: in function '(for generator)'
+	/corelib/string.lua:48: in function 'explode'
+	/game_pokedex/pokedex.lua:414: in function 'doCreatePokedex'
+	/game_pokedex/pokedex.lua:68: in function 'callback'
+	/gamelib/protocolgame.lua:17: in function </gamelib/protocolgame.lua:14>
+ERROR: invalid slot
+at:
+	[C++]: LocalPlayer::setInventoryItem
+ERROR: ProtocolGame parse message exception (2093 bytes unread, last opcode is 39, prev opcode is 121): unhandled opcode 39
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk

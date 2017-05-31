@@ -30,12 +30,6 @@ BattleNPCs < BattleIcon
 BattleMonsters < BattleIcon
   image-source: /images/game/battle/battle_monsters
 
-BattleSkulls < BattleIcon
-  image-source: /images/game/battle/battle_skulls
-
-BattleParty < BattleIcon
-  image-source: /images/game/battle/battle_party
-
 MiniWindow
   id: battleWindow
   !text: tr('Battle')
@@ -74,16 +68,6 @@ MiniWindow
       BattleMonsters
         id: hideMonsters
         !tooltip: tr('Hide monsters')
-        @onCheckChange: modules.game_battle.checkCreatures()
-
-      BattleSkulls
-        id: hideSkulls
-        !tooltip: tr('Hide non-skull players')
-        @onCheckChange: modules.game_battle.checkCreatures()
-
-      BattleParty
-        id: hideParty
-        !tooltip: tr('Hide party members')
         @onCheckChange: modules.game_battle.checkCreatures()
 
     Panel

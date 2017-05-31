@@ -144,7 +144,7 @@ function show()
       local focusedpoke = pokedexListPanel:getFocusedChild()
 		if focusedChild == nil or focusedpoke == nil then return end
 		if focusedpoke.pokeName == "??????" then
-			g_game.talk("!testedz none")
+			g_game.talk("!zdex none")
 		else
 			local name = focusedpoke.pokeName
 			local id = focusedpoke.pokeId
@@ -157,7 +157,7 @@ function show()
 			elseif id == 122 then
 				name = spec.."Mr. Mime"
 			end
-			g_game.talk("!testedz ".. focusedChild:getText() ..",".. name ..",false")
+			g_game.talk("!zdex ".. focusedChild:getText() ..",".. name ..",false")
 		end
 		return false
 	end
@@ -176,7 +176,7 @@ function hide()
 		pokedexIcon:setOn(false)
 		--pokedexIcon:setOpacity(0.5)
 	end
-	g_game.talk("!testedz Close")
+	g_game.talk("!zdex Close")
 end
 
 function visibleDex()
@@ -493,7 +493,7 @@ function doCreatePokedex(protocol, opcode, buffer)
       local focusedtab = pokedexTabBar:getCurrentTab()
 		if focusedChild == nil then return end
 		if focusedChild.pokeName == "??????" then
-			g_game.talk("!testedz none")
+			g_game.talk("!zdex none")
 			specialButton:setVisible(false)
 		else
 			local name = focusedChild.pokeName
@@ -517,7 +517,7 @@ function doCreatePokedex(protocol, opcode, buffer)
 			elseif id == 122 then
 				name = "Mr. Mime"
 			end
-			g_game.talk("!testedz ".. focusedtab:getText() ..",".. name ..",true")
+			g_game.talk("!zdex ".. focusedtab:getText() ..",".. name ..",true")
 		end
 	end
 end
@@ -526,7 +526,7 @@ function doTransformSpecial()
       local focusedtab = pokedexTabBar:getCurrentTab()
       local focusedpoke = pokedexListPanel:getFocusedChild()
 		if focusedpoke.pokeName == "??????" then
-			g_game.talk("!testedz none")
+			g_game.talk("!zdex none")
 		else
 			local spec = "Shiny "
 			local elites = {"Hitmonlee", "Hitmonchan", "Hitmontop", "Elite Hitmonlee", "Elite Hitmonchan", "Elite Hitmontop"}
@@ -565,7 +565,7 @@ function doTransformSpecial()
 					name = "Mr. Mime"
 				end
 			end
-			g_game.talk("!testedz ".. focusedtab:getText() ..",".. name ..",true")
+			g_game.talk("!zdex ".. focusedtab:getText() ..",".. name ..",true")
 		end
 	return true
 end
@@ -778,7 +778,7 @@ function valueToColor(value)
 	if value >= 160 then
 		return 'red'
 	elseif value >= 120 and value <= 159 then
-		return 'orange'
+		return '#f36500'
 	elseif value >= 80 and value <= 119 then
 		return 'yellow'
 	else

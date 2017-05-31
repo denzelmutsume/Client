@@ -3,16 +3,6 @@ CountWindow < MainWindow
   !text: tr('Move Stackable Item')
   size: 196 90
 
-  SpinBox
-    id: spinBox
-    anchors.left: parent.left
-    anchors.top: parent.top
-    width: 1
-    height: 1
-    phantom: true
-    margin-top: 2
-    focusable: true
-
   Item
     id: item
     anchors.left: parent.left
@@ -20,6 +10,7 @@ CountWindow < MainWindow
     margin-top: 2
     margin-left: -4
     focusable: false
+    image-color: alpha
     virtual: true
 
   HorizontalScrollBar
@@ -40,6 +31,16 @@ CountWindow < MainWindow
     anchors.top: countScrollBar.bottom
     margin-top: 7
     focusable: false
+
+  SpinBox
+    id: spinBox
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    width: 1
+    height: 1
+    phantom: true
+    margin-bottom: 12
+    focusable: true
 
   Button
     id: buttonOk

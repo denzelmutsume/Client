@@ -79,10 +79,6 @@ end
 
 function bindKeys()
   gameRootPanel:setAutoRepeatDelay(100)
-
-
-
-
   bindWalkKey('Up', North)
   g_keyboard.bindKeyDown('Up', function() g_game.turn(North) end, gameRootPanel)
   bindWalkKey('Right', East)
