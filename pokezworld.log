@@ -133,3 +133,118 @@ stack traceback:
 	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
 	/game_questlog/questlog.lua:46: in function 'terminate'
 	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 01 2017 11:04:17
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+ERROR: Unable to find module 'client_modulemanager' required by 'client'
+ERROR: audio buffer underrun
+at:
+	[C++]: StreamSoundSource::update
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 01 2017 11:04:59
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+ERROR: Unable to find module 'client_modulemanager' required by 'client'
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 01 2017 13:21:37
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+ERROR: Unable to find module 'client_modulemanager' required by 'client'
+ERROR: protected lua call failed: LUA ERROR:
+/game_dpanel/dpanel.lua:214: attempt to compare number with nil
+stack traceback:
+	[C]: ?
+	/game_dpanel/dpanel.lua:214: in function 'show'
+	/game_dpanel/dpanel.lua:6: in function 'callback'
+	/gamelib/protocolgame.lua:17: in function </gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: LUA ERROR:
+/game_dpanel/dpanel.lua:214: attempt to compare number with nil
+stack traceback:
+	[C]: ?
+	/game_dpanel/dpanel.lua:214: in function 'show'
+	/game_dpanel/dpanel.lua:6: in function 'callback'
+	/gamelib/protocolgame.lua:17: in function </gamelib/protocolgame.lua:14>
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+ERROR: protected lua call failed: LUA ERROR:
+/game_dpanel/dpanel.lua:214: attempt to compare number with nil
+stack traceback:
+	[C]: ?
+	/game_dpanel/dpanel.lua:214: in function 'show'
+	/game_dpanel/dpanel.lua:6: in function 'callback'
+	/gamelib/protocolgame.lua:17: in function </gamelib/protocolgame.lua:14>
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+ERROR: protected lua call failed: LUA ERROR:
+/game_dpanel/dpanel.lua:214: attempt to compare number with nil
+stack traceback:
+	[C]: ?
+	/game_dpanel/dpanel.lua:214: in function 'show'
+	/game_dpanel/dpanel.lua:6: in function 'callback'
+	/gamelib/protocolgame.lua:17: in function </gamelib/protocolgame.lua:14>
+ERROR: protected lua call failed: LUA ERROR:
+/game_dpanel/dpanel.lua:214: attempt to compare number with nil
+stack traceback:
+	[C]: ?
+	/game_dpanel/dpanel.lua:214: in function 'show'
+	/game_dpanel/dpanel.lua:6: in function 'callback'
+	/gamelib/protocolgame.lua:17: in function </gamelib/protocolgame.lua:14>
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
