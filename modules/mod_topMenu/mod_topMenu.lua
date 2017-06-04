@@ -6,7 +6,7 @@ local pokedexIcon = nil
 local caughtsIcon = nil
 local ropeIcon = nil
 
-local path = '/images/ui/topMenu_icons/'
+local path = '/images/topbuttons/'
 local currentSlot = 0
 -- End local variables
 
@@ -16,14 +16,14 @@ function init()
    pokedexIcon:setVisible(false)  
    g_keyboard.bindKeyDown('Ctrl+D', togglePokedexIcon)  
    
-   fishingIcon = modules.client_topmenu.addRightGameToggleButton('fishingIcon', 'Fishing(Ctrl+Z)', path..'fishing_icon', toggleFishingIcon)
+   fishingIcon = modules.client_topmenu.addRightGameToggleButton('fishingIcon', 'Fishing(Ctrl+Z)', path..'fishing', toggleFishingIcon)
    fishingIcon:setVisible(false)
    g_keyboard.bindKeyDown('Ctrl+Z', toggleFishingIcon)  
    
-   bagIcon = modules.client_topmenu.addRightGameToggleButton('bag2_icon', 'Ballpack', path..'bag2_icon', toggleBagIcon)
+   bagIcon = modules.client_topmenu.addRightGameToggleButton('bag2_icon', 'Ballpack', path..'ballpack', toggleBagIcon)
    bagIcon:setVisible(false)
- --[[ local gameMapPanel = modules.game_interface.getMapPanel()
-  g_mouse.bindPress(gameMapPanel, toggleDuelIcon, 3)]]
+  local gameMapPanel = modules.game_interface.getMapPanel()
+  g_mouse.bindPress(gameMapPanel, toggleDuelIcon, 3)
 
    connect(g_game, { onGameStart = online,
                      onGameEnd = offline })
@@ -44,7 +44,6 @@ end
 end]]
 
 function offline()
-   bagIcon:setIcon(path..'bag2_icon')
    bagIcon:setOn(false)
    bagIcon:setVisible(false)
    fishingIcon:setVisible(false)

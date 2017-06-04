@@ -1,22 +1,22 @@
 creatures:
   399:
-    opacity:0.3
+    opacity:0.6
   416:
-    opacity:0.3
+    opacity:0.6
   595:
-    opacity:0.3
+    opacity:0.6
   416:
-    opacity:0.3
+    opacity:0.6
   1019:
-    opacity:0.3
+    opacity:0.6
   1287:
-    opacity:0.3
+    opacity:0.6
   1288:
-    opacity:0.3
+    opacity:0.6
   1474:
-    opacity:0.3
+    opacity:0.6
   1475:
-    opacity:0.3
+    opacity:0.6
 effects:
   4:
     opacity:0.9
@@ -84,6 +84,24 @@ effects:
     opacity:0.9
   187:
     opacity:0.9
+  189:
+    opacity:0.7
+  190:
+    opacity:0.7
+  191:
+    opacity:0.7
+  192:
+    opacity:0.7
+  193:
+    opacity:0.7
+  194:
+    opacity:0.7
+  195:
+    opacity:0.7
+  196:
+    opacity:0.7
+  197:
+    opacity:0.7
   210:
     opacity:0.9
   223:
@@ -194,6 +212,14 @@ effects:
     opacity:0.9
   359:
     opacity:0.8
+  362:
+    opacity:0.8
+  369:
+    opacity:0.9
+  370:
+    opacity:0.9
+  371:
+    opacity:0.9
 missiles:
   3:
     opacity:0.8

@@ -48,60 +48,72 @@ UIWindow
       image-source: /images/skins/blastoise
 
     SkinButton
-      text: Articuno
-      image-source: /images/skins/articuno
+      text: Pidgeot
+      image-source: /images/skins/pidgeot
 
     SkinButton
-      text: Zapdos
-      image-source: /images/skins/zapdos
+      text: Raichu
+      image-source: /images/skins/raichu
 
     SkinButton
-      text: Moltres
-      image-source: /images/skins/moltres
+      text: Nidoking
+      image-source: /images/skins/nidoking
 
     SkinButton
-      text: Mewtwo
-      image-source: /images/skins/mewtwo
+      text: Wigglytuff
+      image-source: /images/skins/wigglytuff
 
     SkinButton
-      text: Mew
-      image-source: /images/skins/mew
+      text: Ninetales
+      image-source: /images/skins/ninetales
 
     SkinButton
-      text: Meganium
-      image-source: /images/skins/meganium
+      text: Golduck
+      image-source: /images/skins/golduck
 
     SkinButton
-      text: Typhlosion
-      image-source: /images/skins/typhlosion
+      text: Primeape
+      image-source: /images/skins/primeape
 
     SkinButton
-      text: Feraligatr
-      image-source: /images/skins/feraligatr
+      text: Arcanine
+      image-source: /images/skins/arcanine
 
     SkinButton
-      text: Raikou
-      image-source: /images/skins/raikou
+      text: Alakazam
+      image-source: /images/skins/alakazam
 
     SkinButton
-      text: Entei
-      image-source: /images/skins/entei
+      text: Gengar
+      image-source: /images/skins/gengar
 
     SkinButton
-      text: Suicune
-      image-source: /images/skins/suicune
+      text: Hitmonlee
+      image-source: /images/skins/hitmonlee
 
     SkinButton
-      text: Lugia
-      image-source: /images/skins/lugia
+      text: Hitmonchan
+      image-source: /images/skins/hitmonchan
 
     SkinButton
-      text: Ho-oh
-      image-source: /images/skins/ho-oh
+      text: Scyther
+      image-source: /images/skins/scyther
 
     SkinButton
-      text: Celebi
-      image-source: /images/skins/celebi
+      text: Jynx
+      image-source: /images/skins/jynx
+
+    SkinButton
+      text: Gyarados
+      image-source: /images/skins/gyarados
+
+    SkinButton
+      text: Lapras
+      image-source: /images/skins/lapras
+
+    SkinButton
+      text: Dragonite
+      image-source: /images/skins/dragonite
 
     SkinButton
       text: None

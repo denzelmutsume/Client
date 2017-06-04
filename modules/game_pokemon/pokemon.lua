@@ -41,7 +41,6 @@ function init()
   ProtocolGame.registerExtendedOpcode(104, function(protocol, opcode, buffer) onPokeHealthChange(protocol, opcode, buffer) end)
 
   g_keyboard.bindKeyDown('Ctrl+P', toggle)
- -- g_keyboard.bindKeyDown('Ctrl+Y', toggleOrder)
   pokemonButton = modules.client_topmenu.addRightGameToggleButton('pokemonButton', tr('Pokemon') .. ' (Ctrl+P)', '/images/topbuttons/pokemon', toggle)
   pokemonButton:setVisible(false)
 
@@ -71,8 +70,6 @@ function init()
   pokemonButton:setOn(true)
   ProtocolGame.registerExtendedOpcode(74, function(protocol, opcode, buffer) update(tonumber(buffer)) end)
   local gameMapPanel = modules.game_interface.getMapPanel()
- -- g_mouse.bindPress(gameMapPanel, toggleOrder, 3)
- -- print(tonumber(buffer))
 end
 
 function terminate()
@@ -90,7 +87,6 @@ function terminate()
   
 
   g_keyboard.unbindKeyDown('Ctrl+P', toggle)
-  g_keyboard.unbindKeyDown('Ctrl+Y', toggleOrder)
   pokemonWindow:destroy()
   pokemonButton:destroy()
   fightModeRadioGroup:destroy()

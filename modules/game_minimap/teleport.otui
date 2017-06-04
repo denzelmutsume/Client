@@ -11,7 +11,7 @@ MainWindow
     text-auto-resize: true
     text-offset: 0 1
     anchors.horizontalCenter: parent.horizontalCenter
-    margin-top: -6
+    margin-top: -10
 
   Button
     id: teleportButton

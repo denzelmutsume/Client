@@ -7,7 +7,7 @@ function init()
   background = g_ui.displayUI('background')
   background:lower()
   clientVersionLabel = background:getChildById('clientVersionLabel')
-  clientVersionLabel:setText("PokeZWorld\n Version: 0.25.90")
+  clientVersionLabel:setText("PokeZWorld\n Version: 0.26")
 
   if not g_game.isOnline() then
     addEvent(function() g_effects.fadeIn(clientVersionLabel, 1500) end)

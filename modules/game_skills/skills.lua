@@ -48,10 +48,9 @@ function init()
 
  -- setSkillValue('dungeonpoints', 69)
   --setSkillValue('69', dungeonpoints)
-  skillsButton = modules.client_topmenu.addRightGameToggleButton('skillsButton', tr('Habilidades') .. ' (Ctrl+S)', '/modules/game_skills/img/perfil_icon', toggle)
+  skillsButton = modules.client_topmenu.addRightGameToggleButton('skillsButton', tr('Habilidades') .. ' (Ctrl+S)', '/images/topbuttons/skills', toggle)
   skillsButton:setOn(true)
   skillsButton:setVisible(false)
-  skillsButton:setWidth(30)
   skillsWindow = g_ui.loadUI('skills', modules.game_interface.getRightPanel()) -- skills
   kantovalue = skillsWindow:recursiveGetChildById("kantovalue")
 
@@ -120,25 +119,10 @@ function terminate()
   skillsButton:destroy()
 end
 
---function messageKanto(protocol,opcode,buffer)
---local data = tonumber(buffer)
---if not data then
---return
---setValue('messsage', data)
---print(buffer)
---end
-
 function changeImg()
   local player = g_game.getLocalPlayer()
   if not player then return end
-  --g_game.talk("#getSto# 86228")
 end
-
---function changeKanto()
- -- local player = g_game.getLocalPlayer()
-  --if not player then return end
-  --g_game.talk("#getKanto#")
---end
 
 function getParams(mode, text)
 if not g_game.isOnline() then return end
@@ -152,19 +136,6 @@ if not g_game.isOnline() then return end
       end
    end
 end
-
---function getParams(mode, text)
---if not g_game.isOnline() then return end
- --  if mode == MessageModes.Failure then 
-  --    if text:find("#getKanto#") then
-   --      local textkanto = skillsWindow:recursiveGetChildById("clanicon")
-   --      if textkanto then
-   --         local t = string.explode(text, " ")
-     --       icon:setImageSource(imgs[tonumber(t[2])])
-    --     end
-    --  end
-  -- end
---end
 
 function expForLevel(level)
   return math.floor((50*level*level*level)/3 - 100*level*level + (850*level)/3 - 200)
@@ -269,7 +240,8 @@ function checkAlert(id, value, maxValue, threshold, greaterThan)
   else
     resetSkillColor(id)
   end
-end     
+end  
+   
 function update()
   local offlineTraining = skillsWindow:recursiveGetChildById('offlineTraining')
   if not g_game.getFeature(GameOfflineTrainingTime) then
@@ -490,9 +462,11 @@ function onBaseMagicLevelChange(localPlayer, baseMagicLevel)
 end
 
 function onSkillChange(localPlayer, id, level, percent)
-  setSkillValue('skillId' .. id, level)
+  if id ~= 3 then
+	setSkillValue('skillId' .. id, level)
+  end
   setSkillPercent('skillId2', percent, tr('You have %s percent to go', 100 - percent))
-  setSkillPercent('skillId3', percent, tr('You have %s percent to go', 100 - percent))
+ -- setSkillPercent('skillId3', percent, tr('You have %s percent to go', 100 - percent))
   setSkillPercent('skillId4', percent, tr('You have %s percent to go', 100 - percent))
   setSkillPercent('skillId5', percent, tr('You have %s percent to go', 100 - percent))
   setSkillPercent('skillId6', percent, tr('You have %s percent to go', 100 - percent))
@@ -501,7 +475,9 @@ function onSkillChange(localPlayer, id, level, percent)
 end
 
 function onBaseSkillChange(localPlayer, id, baseLevel)
-  setSkillBase('skillId'..id, localPlayer:getSkillLevel(id), baseLevel)
+  if id ~= 3 then
+	setSkillBase('skillId'..id, localPlayer:getSkillLevel(id), baseLevel)
+  end
 end
 
 function onKantoChange(mode, text)

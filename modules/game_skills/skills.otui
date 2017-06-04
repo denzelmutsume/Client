@@ -46,10 +46,26 @@ SkillPercentPanel < ProgressBar
 MiniWindow
   id: skillWindow
   !text: tr('Skills')
-  height: 150
+  height: 50
   icon: /modules/game_skills/img/perfil_icon
   @onClose: modules.game_skills.onMiniWindowClose()
   &save: true
+
+  UIButton
+    id: moneyTogetherButton
+    anchors.top: minimizeButton.top
+    anchors.right: minimizeButton.left
+    margin-right: 3
+    size: 14 14
+    image-source: /images/ui/miniwindow_buttons
+    image-clip: 112 0 14 14
+    @onClick: g_game.talk('!moneytogether')
+
+    $hover:
+      image-clip: 112 14 14 14
+
+    $pressed:
+      image-clip: 112 28 14 14
 
   MiniWindowContents
     padding-left: 5
@@ -98,13 +114,6 @@ MiniWindow
       id: skillId6
       SkillNameLabel
         !text: tr('Fishing')
-      SkillValueLabel
-      SkillPercentPanel
-
-    SkillButton
-      id: skillId3
-      SkillNameLabel
-        !text: tr('Headbutt')
       SkillValueLabel
       SkillPercentPanel
 

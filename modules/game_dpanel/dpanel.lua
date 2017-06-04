@@ -1,8 +1,9 @@
 function init()
   connect(g_game, { onGameEnd = onGameEnd })
   ProtocolGame.registerExtendedOpcode(72, function(protocol, opcode, buffer)
-  local strings = string.explode(buffer, '|')  
-  if strings[36] ~= "true" then
+  local strings = string.explode(buffer, '|')
+	print(#strings)
+  if not strings[36] or strings[36] ~= "true" then
   show(strings[1], strings[2], strings[3], strings[4], strings[5], strings[6], strings[7], strings[8], strings[9], strings[10], strings[11], strings[12], strings[13], strings[14], strings[15], strings[16], strings[17], strings[18], strings[19], strings[20], strings[21], strings[22], strings[23], strings[24], strings[25], strings[26], strings[27], strings[28], strings[29], strings[30], strings[31], strings[32], strings[33], strings[34], strings[35])
   end
   updateTeamButtons(strings[37], strings[38])

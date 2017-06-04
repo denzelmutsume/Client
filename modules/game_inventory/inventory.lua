@@ -1,6 +1,6 @@
 function init()
   g_keyboard.bindKeyDown('Ctrl+I', toggle)
-  inventoryButton = modules.client_topmenu.addRightGameToggleButton('inventoryButton', tr('Inventory') .. ' (Ctrl+I)', '/images/ui/topMenu_icons/bag_icon', toggle)
+  inventoryButton = modules.client_topmenu.addRightGameToggleButton('inventoryButton', tr('Inventory') .. ' (Ctrl+I)', '/images/topbuttons/inventory', toggle)
   inventoryButton:setVisible(false)
   connect(g_game, {
     onGameStart = online,

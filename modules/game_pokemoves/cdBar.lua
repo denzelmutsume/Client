@@ -177,7 +177,7 @@ end
 
 function createMenu()
    local menu = g_ui.createWidget('PopupMenu')
-   menu:addOption("Set "..(isIn == 'H' and 'Vertical' or 'Horizontal'), function() toggle() end)
+   menu:addOption("Set "..(isIn == 'H' and 'Horizontal' or 'Vertical'), function() toggle() end)
    menu:display()
 end
 

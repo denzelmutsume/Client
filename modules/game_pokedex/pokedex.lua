@@ -64,7 +64,7 @@ typetostone = {
 function init()
   connect(g_game, { onGameEnd = hide })
 
-  ProtocolGame.registerExtendedOpcode(100, function(protocol, opcode, buffer) showPokemonPanel(buffer) end) --onUsePokedex(protocol, opcode, buffer)
+  ProtocolGame.registerExtendedOpcode(100, function(protocol, opcode, buffer) showPokemonPanel(buffer) end)
   ProtocolGame.registerExtendedOpcode(101, function(protocol, opcode, buffer) doCreatePokedex(protocol, opcode, buffer) end)
 end
 
@@ -130,11 +130,7 @@ function show()
   pokemonStatsSpAttack = statsPanel:getChildById('pokemonStatsSpAttackPercent')
   pokemonStatsVitality = statsPanel:getChildById('pokemonStatsVitalityPercent')
   pokedexTabBar:addTab('Stats', statsPanel)
-     -- local focused = pokedexTabBar:getFocusedChild()
 
-  --movesPanel = function() g_game.talk("/dex Venusaur") end
- -- pokemonMoves = movesPanel:getChildById('pokemonMoves')
-  --pokedexTabBar:addTab('    !    ', movesPanel)
   effectivenessPanel = g_ui.loadUI('effectiveness')
   pokemonEffectiveness = effectivenessPanel:getChildById('pokemonEffectiveness')
   pokedexTabBar:addTab('Effectiveness', effectivenessPanel)
@@ -162,7 +158,6 @@ function show()
 		return false
 	end
   pokedexIcon:setOn(true)
- -- pokedexIcon:setOpacity(1.0)
 end
 
 
@@ -174,7 +169,6 @@ function hide()
 		pokedexWindow:destroy()
 		pokedexWindow = nil
 		pokedexIcon:setOn(false)
-		--pokedexIcon:setOpacity(0.5)
 	end
 	g_game.talk("!zdex Close")
 end
@@ -188,7 +182,6 @@ end
 
 
 function changedex()
---hide()
 if eoq < 10 then
 	eoq = eoq+1
 else
@@ -208,196 +201,6 @@ function searchPokemon()
     pokemon:setVisible(searchCondition)
   end
 end
-
-function getEffectiveness(type1, type2)
-local str = {}
-local efetividades = "NOTHING"
-if type1 == "Grass" and type2 and type2 == "Poison" or type1 == "Poison" and type2 and type2 == "Grass" then
-efetividades = {weak = {"flying", "fire", "psychic", "ice"}, normal = {"normal", "poison", "ground", "rock", "bug", "ghost", "steel", "dragon", "dark"}, resist = {"fighting", "water", "electric", "fairy"}, vresist = {"grass"}}
-elseif type1 == "Fire" and not type2 then
-efetividades = {weak = {"ground", "rock", "water"}, normal = {"normal", "fighting", "flying", "poison", "electric", "ghost", "psychic", "dragon", "dark"}, resist = {"bug", "steel", "fire", "greas", "ice", "fairy"}}
-elseif type1 == "Fire" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Fire" then
-efetividades = {vweak = {"rock"}, weak = {"water", "electric"}, normal = {"normal", "poison", "flying", "psychic", "ice", "ghost", "dragon", "dark"}, resist = {"fighting", "steel", "fire", "fairy"}, vresist = {"bug", "grass"}, imun = {"ground"}}
-elseif type1 == "Water" and not type2 then
-efetividades = {weak = {"grass", "electric"}, normal = {"normal", "poison", "flying", "psychic", "fighting", "ground", "rock", "bug", "ghost", "dragon", "dark", "fairy"}, resist = {"water", "steel", "fire", "ice"}}
-elseif type1 == "Bug" and not type2 then
-efetividades = {weak = {"flying", "rock", "fire"}, normal = {"normal", "poison", "bug", "ghost", "steel", "water", "electric", "psychic", "ice", "dragon", "dark", "fairy"}, resist = {"fighting", "ground", "grass"}}
-elseif type1 == "Bug" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Bug" then
-efetividades = {vweak = {"rock"}, weak = {"flying", "electric", "fire", "ice"}, normal = {"normal", "poison", "ghost", "steel", "water", "psychic", "dragon", "dark", "fairy"}, resist = {"bug"}, vresist = {"fighting",  "grass"}, imun = {"ground"}}
-elseif type1 == "Bug" and type2 and type2 == "Flying" then
-efetividades = {vweak = {"rock"}, weak = {"flying", "electric", "fire", "ice"}, normal = {"normal", "poison", "ghost", "steel", "water", "psychic", "dragon", "dark", "fairy"}, resist = {"bug"}, vresist = {"fighting",  "grass"}, imun = {"ground"}}
-elseif type1 == "Bug" and type2 and type2 == "Poison" then
-efetividades = {weak = {"flying", "rock", "fire", "psychic"}, normal = {"normal", "ground", "ghost", "steel", "water", "electric", "ice", "dragon", "dark"}, resist = {"poison", "bug", "fairy"}, vresist = {"fighting",  "grass"}}
-elseif type1 == "Normal" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Normal" then
-efetividades = {weak = {"electric", "rock", "ice"}, normal = {"normal", "fighting", "flying", "poison", "fire", "water", "psychic", "dragon", "dark", "fairy"}, resist = {"grass", "bug"}, imun = {"ground",  "ghost"}}
-elseif type1 == "Normal" and not type2 then
-efetividades = {weak = {"fighting"}, normal = {"normal", "flying", "poison", "ground", "rock", "bug", "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy"}, imun = {"ghost"}}
-elseif type1 == "Poison" and not type2 then
-efetividades = {weak = {"ground", "psychic"}, normal = {"normal", "flying", "rock", "ghost", "steel", "fire", "water", "electric", "ice", "dragon", "dark"}, resist = {"fighting", "poison", "bug", "grass", "fairy"}}
-elseif type1 == "Electric" and not type2 then
-efetividades = {weak = {"ground"}, normal = {"normal", "fighting", "poison", "rock", "bug", "ghost", "fire", "water", "grass", "psychic", "ice", "dragon", "dark", "fairy"}, resist = {"flying", "steel", "electric"}}
-elseif type1 == "Ground" and not type2 then
-efetividades = {weak = {"water", "grass", "ice"}, normal = {"normal", "fighting", "flying", "ground", "bug", "ghost", "steel", "fire", "psychic", "dragon", "dark", "fairy"}, resist = {"poison", "rock"}, imun = {"electric"}}
-elseif type1 == "Poison" and type2 and type2 == "Ground" or type1 == "Ground" and type2 and type2 == "Poison" then
-efetividades = {weak = {"ground", "water", "psychic", "ice"}, normal = {"normal", "flying", "ghost", "steel", "fire", "grass", "dragon", "dark"}, resist = {"fighting", "rock", "bug", "fairy"}, vresist = {"poison"}, imun = {"electric"}}
-elseif type1 == "Poison" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Poison" then
-efetividades = {weak = {"rock", "electric", "psychic", "ice"}, normal = {"normal", "flying", "ghost", "steel", "fire", "water", "dragon", "dark"}, resist = {"poison", "fairy"}, vresist = {"fighting", "bug", "grass"}, imun = {"ground"}}
-elseif type1 == "Bug" and type2 and type2 == "Grass" or type1 == "Grass" and type2 and type2 == "Bug" then
-efetividades = {vweak = {"flying", "fire"}, weak = {"poison", "rock", "bug", "ice"}, normal = {"normal", "ghost", "steel", "psychic", "dragon", "dark", "fairy"}, resist = {"fighting", "water", "electric"}, vresist = {"ground", "grass"}}
-elseif type1 == "Fighting" and not type2 then
-efetividades = {weak = {"flying", "psychic", "fairy"}, normal = {"normal", "fighting", "poison", "ground", "ghost", "steel", "fire", "water", "grass", "electric", "ice", "dragon"}, resist = {"rock", "bug", "dark"}}
-elseif type1 == "Water" and type2 and type2 == "Fighting" then
-efetividades = {weak = {"flying", "grass", "electric", "psychic", "fairy"}, normal = {"normal", "fighting", "poison", "ground", "ghost", "dragon"}, resist = {"rock", "bug", "steel", "fire", "water", "ice", "dark"}}
-elseif type1 == "Psychic" and not type2 then
-efetividades = {weak = {"bug", "ghost", "dark"}, normal = {"normal", "flying", "poison", "ground", "rock", "steel", "fire", "water", "grass", "electric", "ice", "dragon", "fairy"}, resist = {"fighting", "psychic"}}
-elseif type1 == "Water" and type2 and type2 == "Poison" then
-efetividades = {weak = {"ground", "electric", "psychic"}, normal = {"normal", "flying", "rock", "ghost", "grass", "dragon", "dark"}, resist = {"fighting", "poison", "bug", "steel", "fire", "water", "ice", "fairy"}}
-elseif type1 == "Rock" and type2 and type2 == "Ground" then
-efetividades = {vweak = {"water", "grass"}, weak = {"fighting", "ground", "steel", "ice"}, normal = {"bug", "ghost", "psychic", "dragon", "dark", "fairy"}, resist = {"normal", "flying", "rock", "fire"}, vresist = {"poison"}, imun = {"electric"}}
-elseif type1 == "Water" and type2 and type2 == "Psychic" then
-efetividades = {weak = {"bug", "ghost", "grass", "electric", "dark"}, normal = {"normal", "flying", "poison", "ground", "rock", "dragon", "fairy"}, resist = {"fighting", "steel", "fire", "water", "psychic", "ice"}}
-elseif type1 == "Electric" and type2 and type2 == "Steel" then
-efetividades = {vweak = {"ground"}, weak = {"fighting", "fire"}, normal = {"ghost", "water", "dark"}, resist = {"normal", "rock", "bug", "grass", "electric", "psychic", "ice", "dragon", "fairy"}, vresist = {"flying", "steel"}}
-elseif type1 == "Water" and type2 and type2 == "Ice" then
-efetividades = {weak = {"fighting", "rock", "grass", "electric"}, normal = {"normal", "flying", "poison", "ground", "bug", "ghost", "steel", "fire", "psychic", "dragon", "dark", "fairy"}, resist = {"water"}, vresist = {"ice"}}
-elseif type1 == "Ghost" and type2 and type2 == "Poison" then
-efetividades = {weak = {"ghost", "psychic", "dark"}, normal = {"flying", "rock", "steel", "fire", "water", "electric", "ice", "dragon"}, resist = {"grass", "fairy"}, vresist = {"poison", "bug"}}
-elseif type1 == "Grass" and type2 and type2 == "Psychic" then
-efetividades = {vweak = {"bug",}, weak = {"flying", "poison", "ghost", "fire", "ice", "dark"}, normal = {"normal", "rock", "steel", "dragon", "fairy"}, resist = {"fighting", "ground", "water", "grass", "electric", "psychic"}}
-elseif type1 == "Grass" and not type2 then
-efetividades = {weak = {"flying", "poison", "bug", "fire", "ice"}, normal = {"normal", "fighting", "rock", "ghost", "steel", "psychic", "dragon", "dark", "fairy"}, resist = {"ground", "water", "grass", "electric"}}
-elseif type1 == "Ice" and type2 and type2 == "Psychic" then
-efetividades = {weak = {"rock", "bug", "ghost", "steel", "fire", "dark"}, normal = {"normal", "fighting", "flying", "poison", "water", "grass", "electric", "dragon", "dark"}, resist = {"psychic", "ice"}}
-elseif type1 == "Water" and type2 and type2 == "Flying" then
-efetividades = {vweak = {"electric"}, weak = {"rock"}, normal = {"normal", "flying", "poison", "ghost", "grass", "psychic", "ice", "dragon", "dark", "fairy"}, resist = {"fighting", "bug", "steel", "fire", "water"}, imun = {"ground"}}
-elseif type1 == "Rock" and type2 and type2 == "Water" or type1 == "Water" and type2 and type2 == "Rock" then
-efetividades = {vweak = {"grass"}, weak = {"fighting", "ground", "electric"}, normal = {"rock", "bug", "ghost", "steel", "water", "psychic", "dragon", "dark", "fairy"}, resist = {"normal", "flying", "poison", "ice"}, vresist = {"fire"}}
-elseif type1 == "Rock" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Rock" then
-efetividades = {weak = {"rock", "steel", "water", "electric", "ice"}, normal = {"fighting", "ghost", "grass", "psychic", "dragon", "dark", "fairy"}, resist = {"normal", "flying", "poison", "bug", "fire"}, imun = {"ground"}}
-elseif type1 == "Ice" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Ice" then
-efetividades = {vweak = {"rock"}, weak = {"steel", "fire", "electric"}, normal = {"normal", "fighting", "flying", "poison", "ghost", "water", "psychic", "ice", "dragon", "dark", "fairy"}, resist = {"bug", "grass"}, imun = {"ground"}}
-elseif type1 == "Electric" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Electric" then
-efetividades = {weak = {"rock", "ice"}, normal = {"normal", "poison", "ghost", "fire", "water", "electric", "psychic", "dragon", "dark", "fairy"}, resist = {"fighting", "flying", "bug", "steel", "grass"}, imun = {"ground"}}
-elseif type1 == "Dragon" and not type2 then
-efetividades = {weak = {"ice", "dragon", "fairy"}, normal = {"normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "psychic", "dark"}, resist = {"fire", "water", "grass", "electric"}}
-elseif type1 == "Dragon" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Dragon" then
-efetividades = {vweak = {"ice"}, weak = {"rock", "dragon", "fairy"}, normal = {"normal", "flying", "poison", "ghost", "steel", "electric", "psychic", "dark"}, resist = {"fighting", "bug", "fire", "water"}, vresist = {"grass"}, imun = {"ground"}}
-elseif type1 == "Flying" then
-efetividades = {weak = {"electric", "rock", "ice"}, normal = {"normal", "flying", "poison", "fire", "water", "psychic", "dragon", "dark", "fairy", "ghost"}, resist = {"grass", "bug", "fighting"}, imun = {"ground"}}
-elseif type1 == "Electric" and type2 and type2 == "Water" or type1 == "Water" and type2 and type2 == "Electric" then
-efetividades = {weak = {"grass", "ground"}, normal = {"normal", "electric", "fighting", "poison", "rock", "bug", "ghost", "psychic", "dragon", "dark", "fairy"}, resist = {"flying", "fire", "water", "ice"}, vresist = {"steel"}}
-elseif type1 == "Fairy" and not type2 then
-efetividades = {weak = {"steel", "poison"}, normal = {"normal", "flying", "grass", "fire", "water", "ice", "electric", "ground", "rock", "ghost", "psychic", "fairy"}, resist = {"fighting", "dark", "bug"}, imun = {"dragon"}}
-elseif type1 == "Fairy" and type2 and type2 == "Normal" or type1 == "Normal" and type2 and type2 =="Fairy" then
-efetividades = {weak = {"steel", "poison"}, normal = {"normal", "fighting", "flying", "grass", "fire", "water", "ice", "electric", "ground", "rock", "psychic", "fairy"}, resist = {"dark", "bug"}, imun = {"dragon", "ghost"}}
-elseif type1 == "Fairy" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Fairy" then
-efetividades = {weak = {"steel", "poison", "electric", "ice", "rock"}, normal = {"normal", "flying", "fire", "water", "ghost", "psychic", "fairy"}, resist = {"dark", "grass"}, vresist = {"fighting", "bug"}, imun = {"dragon", "ground"}}
-elseif type1 == "Psychic" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Psychic" then
-efetividades = {weak = {"dark", "electric", "ice", "ghost", "rock"}, normal = {"normal", "flying", "fire", "water", "bug", "poison", "steel", "dragon", "fairy"}, resist = {"grass", "psychic"}, vresist = {"fighting"}, imun = {"ground"}}
-elseif type1 == "Electric" and type2 and type2 == "Dragon" or type1 == "Dragon" and type2 and type2 == "Electric" then
-efetividades = {weak = {"ice", "ground", "dragon", "fairy"}, normal = {"normal", "dark", "electric", "ghost", "rock", "fighting", "bug", "psychic", "poison"}, resist = {"grass", "fire", "water", "flying", "steel"}, vresist = {"electric"}}
-elseif type1 == "Fire" and type2 and type2 == "Dragon" or type1 == "Dragon" and type2 and type2 == "Fire" then
-efetividades = {weak = {"ground", "rock", "dragon"}, normal = {"normal", "ice", "dark", "water", "flying", "ghost", "fighting", "psychic", "poison", "fairy"}, resist = {"electric", "bug", "steel"}, vresist = {"grass", "fire"}}
-elseif type1 == "Dark" and type2 and type2 == "Normal" or type1 == "Normal" and type2 and type2 == "Dark" then
-efetividades = {vweak = {"fighting"}, weak = {"bug", "fairy"}, normal = {"normal", "grass", "fire", "water", "flying", "rock", "electric", "poison", "ice", "ground", "dragon", "steel"}, resist = {"dark"}, imun = {"psychic", "ghost"}}
-elseif type1 == "Electric" and type2 and type2 == "Psychic" or type1 == "Psychic" and type2 and type2 == "Electric" then
-efetividades = {weak = {"bug", "ghost", "dark", "ground"}, normal = {"normal", "grass", "fire", "water", "rock", "poison", "ice", "dragon", "fairy"}, resist = {"psychic", "flying", "electric", "fighting", "steel"}}
-elseif type1 == "Ice" and type2 and type2 == "Steel" or type1 == "Steel" and type2 and type2 == "Ice" then
-efetividades = {vweak = {"fire", "fighting"}, weak = {"ground"}, normal = {"water", "electric", "rock", "ghost", "steel", "dark"}, resist = {"normal", "grass", "flying", "psychic", "bug", "dragon", "fairy"}, vresist = {"ice"}, imun = {"poison"}}
-elseif type1 == "Ice" and type2 and type2 == "Fairy" or type1 == "Fairy" and type2 and type2 == "Ice" then
-efetividades = {vweak = {"steel"}, weak = {"fire", "poison", "rock"}, normal = {"normal", "grass", "water", "electric", "flying", "psychic", "ground", "fighting", "ghost", "fairy"}, resist = {"ice", "bug", "dark"}, imun = {"dragon"}}
-elseif type1 == "Dark" and not type2 then
-efetividades = {weak = {"fighting", "bug", "fairy"}, normal = {"normal", "grass", "fire", "water", "electric", "poison", "ice", "rock", "flying", "ground", "steel", "dragon"}, resist = {"ghost", "dark"}, imun = {"psychic"}}
-elseif type1 == "Fairy" and type2 and type2 == "Water" or type1 == "Water" and type2 and type2 == "Fairy" then
-efetividades = {weak = {"electric", "grass", "poison"}, normal = {"normal", "flying", "ground", "rock", "ghost", "psychic", "steel", "fairy"}, resist = {"fire", "water", "fighting", "ice", "dark", "bug"}, imun = {"dragon"}}
-elseif type1 == "Rock" and not type2 then
-efetividades = {weak = {"water", "grass", "fighting", "ground", "steel"}, normal = {"bug", "electric", "ice", "rock", "ghost", "psychic", "dark", "dragon", "fairy"}, resist = {"normal", "fire", "poison", "flying"}}
-elseif type1 == "Grass" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Grass" then
-efetividades = {vweak = {"ice"}, weak = {"fire", "poison", "flying", "rock"}, normal = {"normal", "electric", "bug", "ghost", "psychic", "steel", "dragon", "dark", "fairy"}, resist = {"fighting", "water"}, vresist = {"grass"}, imun = {"ground"}}
-elseif type1 == "Water" and type2 and type2 == "Ground" or type1 == "Ground" and type2 and type2 == "Water" then
-efetividades = {vweak = {"grass"}, normal = {"normal", "water", "flying", "bug", "ice", "ground", "ghost", "psychic", "fighting", "dragon", "dark", "fairy"}, resist = {"fire", "poison", "rock", "steel"}, imun = {"electric"}}
-elseif type1 == "Dark" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Dark" then
-efetividades = {weak = {"electric", "ice", "rock", "fairy"}, normal = {"normal", "fire", "water", "flying", "bug", "poison", "fighting", "dragon", "steel"}, resist = {"grass", "ghost", "dark"}, imun = {"psychic", "ground"}}
-elseif type1 == "Ghost" and not type2 then
-efetividades = {weak = {"ghost", "dark"}, normal = {"fire", "water", "grass", "electric", "ice", "flying", "rock", "psychic", "dragon", "steel", "fairy"}, resist = {"poison", "bug"}, imun = {"normal", "fighting", "ground"}}
-elseif type1 == "Normal" and type2 and type2 == "Psychic" or type1 == "Psychic" and type2 and type2 == "Normal" then
-efetividades = {weak = {"bug", "dark"}, normal = {"normal", "fire", "water", "grass", "flying", "poison", "ground", "electric", "ice", "rock", "fighting", "dragon", "steel", "fairy"}, resist = {"psychic"}, imun = {"ghost"}}
-elseif type1 == "Bug" and type2 and type2 == "Steel" or type1 == "Steel" and type2 and type2 == "Bug" then
-efetividades = {vweak = {"fire"}, normal = {"water", "flying", "ground", "electric", "rock", "fighting", "ghost", "dark"}, resist = {"normal", "ice", "psychic", "bug", "dragon", "steel", "fairy"}, vresist = {"grass"}, imun = {"poison"}}
-elseif type1 == "Ground" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Ground" then
-efetividades = {vweak = {"ice"}, weak = {"water"}, normal = {"normal", "fire", "grass", "flying", "psychic", "rock", "ghost", "dark", "dragon", "steel", "fairy"}, resist = {"fighting", "poison", "bug"}, imun = {"electric", "ground"}}
-elseif type1 == "Ground" and type2 and type2 == "Steel" or type1 == "Steel" and type2 and type2 == "Ground" then
-efetividades = {weak = {"fire", "water", "fighting", "ground"}, normal = {"grass", "ice", "ghost", "dark"}, resist = {"normal", "flying", "psychic", "bug", "dragon", "steel", "fairy"}, vresist = {"rock"}, imun = {"electric", "poison"}}
-elseif type1 == "Bug" and type2 and type2 == "Rock" or type1 == "Rock" and type2 and type2 == "Bug" then
-efetividades = {weak = {"water", "rock", "steel"}, normal = {"fire", "grass", "ice", "psychic", "bug", "flying", "ground", "electric", "fighting", "ghost", "dark", "dragon", "fairy"}, resist = {"normal", "poison"}}
-elseif type1 == "Bug" and type2 and type2 == "Fighting" or type1 == "Fighting" and type2 and type2 == "Bug" then
-efetividades = {vweak = {"flying"}, weak = {"fire", "psychic", "fairy"}, normal = {"normal", "ice", "water", "electric", "poison", "rock", "ghost", "dragon", "steel"}, resist = {"grass", "fighting", "ground", "bug", "dark"}}
-elseif type1 == "Dark" and type2 and type2 == "Ice" or type1 == "Ice" and type2 and type2 == "Dark" then
-efetividades = {vweak = {"fighting"}, weak = {"fire", "bug", "rock", "steel", "fairy"}, normal = {"normal", "grass", "ground", "water", "flying", "electric", "poison", "dragon"}, resist = {"ice", "ghost", "dark"}, imun = {"psychic"}}
-elseif type1 == "Fire" and type2 and type2 == "Rock" or type1 == "Rock" and type2 and type2 == "Fire" then
-efetividades = {vweak = {"water", "ground"}, weak = {"fighting", "rock"}, normal = {"grass", "psychic", "electric", "ghost", "dragon", "steel", "dark"}, resist = {"normal", "ice", "poison", "flying", "bug", "fairy"}, vresist = {"fire"}}
-elseif type1 == "Ice" and type2 and type2 == "Ground" or type1 == "Ground" and type2 and type2 == "Ice" then
-efetividades = {weak = {"fire", "water", "grass", "fighting", "steel"}, normal = {"normal", "ice", "flying", "bug", "psychic", "ground", "ghost", "dragon", "rock", "dark", "fairy"}, resist = {"poison"}, imun = {"electric"}}
-elseif type1 == "Flying" and type2 and type2 == "Steel" or type1 == "Steel" and type2 and type2 == "Flying" then
-efetividades = {weak = {"fire", "electric"}, normal = {"water", "ice", "fighting", "ghost", "rock", "dark"}, resist = {"normal", "flying", "psychic", "dragon", "steel", "fairy"}, vresist = {"grass", "bug"}, imun = {"poison", "ground"}}
-elseif type1 == "Dark" and type2 and type2 == "Fire" or type1 == "Fire" and type2 and type2 == "Dark" then
-efetividades = {weak = {"water", "fighting", "ground", "rock"}, normal = {"normal", "bug", "electric", "poison", "flying", "dragon", "fairy"}, resist = {"fire", "grass", "ice", "ghost", "dark", "steel"}, imun = {"psychic"}}
-elseif type1 == "Water" and type2 and type2 == "Dragon" or type1 == "Dragon" and type2 and type2 == "Water" then
-efetividades = {weak = {"dragon", "fairy"}, normal = {"normal", "bug", "electric", "fighting", "ground", "rock", "poison", "flying", "psychic", "grass", "ice", "ghost", "dark"}, resist = {"steel"}, vresist = {"fire", "water"}}
-elseif type1 == "Rock" and type2 and type2 == "Dark" or type1 == "Dark" and type2 and type2 == "Rock" then
-efetividades = {vweak = {"fighting"}, weak = {"water", "grass", "ground", "bug", "steel", "fairy"}, normal = {"electric", "rock", "dragon", "ice"}, resist = {"normal", "fire", "poison", "flying", "ghost", "dark"}, imun = {"psychic"}}
-elseif type1 == "Psychic" and type2 and type2 == "Flying" or type1 == "Flying" and type2 and type2 == "Psychic" then
-efetividades = {weak = {"electric", "ice", "rock", "ghost", "dark"}, normal = {"normal", "fire", "water", "bug", "poison", "flying", "dragon", "steel", "fairy"}, resist = {"grass", "psychic"}, vresist = {"fighting"}, imun = {"ground"}}
-end
-if efetividades.vweak then
-      table.insert(str, "Super Effective:\n")
-for c = 1, #efetividades.vweak do
-      table.insert(str, ""..(c == 1 and ""..doCorrectString(efetividades.vweak[c]).."" or c < #efetividades.vweak and ", "..doCorrectString(efetividades.vweak[c]).."" or " and "..doCorrectString(efetividades.vweak[c]).."").."")
-end
-      table.insert(str, ".")
-end
-if efetividades.weak then
-if table.concat(str) == "" then
-      table.insert(str, "Effective:\n")
-else
-      table.insert(str, "\n\nEffective:\n")
-end
-for d = 1, #efetividades.weak do
-      table.insert(str, ""..(d == 1 and ""..doCorrectString(efetividades.weak[d]).."" or d < #efetividades.weak and ", "..doCorrectString(efetividades.weak[d]).."" or " and "..doCorrectString(efetividades.weak[d]).."").."")
-end
-      table.insert(str, ".")
-end
-if efetividades.normal then
-      table.insert(str, "\n\nNormal:\n")
-for e = 1, #efetividades.normal do
-      table.insert(str, ""..(e == 1 and ""..doCorrectString(efetividades.normal[e]).."" or e < #efetividades.normal and ", "..doCorrectString(efetividades.normal[e]).."" or " and "..doCorrectString(efetividades.normal[e]).."").."")
-end
-      table.insert(str, ".")
-end
-if efetividades.resist then
-      table.insert(str, "\n\nIneffective:\n")
-for f = 1, #efetividades.resist do
-      table.insert(str, ""..(f == 1 and ""..doCorrectString(efetividades.resist[f]).."" or f < #efetividades.resist and ", "..doCorrectString(efetividades.resist[f]).."" or " and "..doCorrectString(efetividades.resist[f]).."").."")
-end
-      table.insert(str, ".")
-end
-if efetividades.vresist then
-      table.insert(str, "\n\nVery Ineffective:\n")
-for g = 1, #efetividades.vresist do
-      table.insert(str, ""..(g == 1 and ""..doCorrectString(efetividades.vresist[g]).."" or g < #efetividades.vresist and ", "..doCorrectString(efetividades.vresist[g]).."" or " and "..doCorrectString(efetividades.vresist[g]).."").."")
-end
-      table.insert(str, ".")
-end
-if efetividades.imun then
-      table.insert(str, "\n\nImmune:\n")
-for h = 1, #efetividades.imun do
-      table.insert(str, ""..(h == 1 and ""..doCorrectString(efetividades.imun[h]).."" or h < #efetividades.imun and ", "..doCorrectString(efetividades.imun[h]).."" or " and "..doCorrectString(efetividades.imun[h]).."").."")
-end
-      table.insert(str, ".")
-end
-return table.concat(str)
-end
-
 
 function doCreatePokedex(protocol, opcode, buffer)
   if pokedexWindow then return end
@@ -480,7 +283,7 @@ function doCreatePokedex(protocol, opcode, buffer)
 					end
 					focused.pokeName = specialType.." ".. focused.pokeName
 				else
-					specialButton:setVisible(false) --pokeName
+					specialButton:setVisible(false)
 				end
 			end, 100)
 			firstSpecial = true
@@ -603,7 +406,6 @@ function showPokemonPanel(buffer)
 		evolutionsStr = string.explode(downPanel, '|')[5]
 		desc = string.explode(downPanel, '|')[6]
 		abilitysStr = string.explode(downPanel, '|')[7]
-  --  pokemonInfo:getChildById("text"):setText(str)
     pokemonInfo:getChildById("foto"):setItemId(fotoID)
     pokemonInfo:getChildById("name"):setText(name)
     pokemonInfo:getChildById("level"):setText("Level: "..level)
@@ -614,14 +416,16 @@ function showPokemonPanel(buffer)
 			boostID1 = getStoneIDByName["Feather Stone"]
 		elseif name == "Vileplume" then
 			boostID1 = getStoneIDByName["Leaf Stone"]
+		elseif name == "Dragonite" or name == "Shiny Dragonite" then
+			boostID1 = getStoneIDByName["Crystal Stone"]
 		else
 			boostID1 = getStoneIDByName[typetostone[doCorrectString(type1)]]
 			if type2 ~= "no type" and  typetostone[doCorrectString(type2)] then
 				boostID2 = getStoneIDByName[typetostone[doCorrectString(type2)]]
 			end
 		end
-    pokemonInfo:getChildById("booststone1"):setItemId(boostID1) -- getStoneIDByName
-    pokemonInfo:getChildById("booststone1"):setTooltip(typetostone[doCorrectString(type1)]) -- getStoneIDByName
+    pokemonInfo:getChildById("booststone1"):setItemId(boostID1)
+    pokemonInfo:getChildById("booststone1"):setTooltip(typetostone[doCorrectString(type1)])
 	if boostID2 > 0 then
 		pokemonInfo:getChildById("booststone2"):setItemId(boostID2)
 		pokemonInfo:getChildById("booststone2"):setTooltip(typetostone[doCorrectString(type2)])
@@ -638,7 +442,6 @@ function showPokemonPanel(buffer)
 		local evos = string.explode(evolutionsStr, ';')
 		local evo1 = string.explode(evos[1], ',')
 		local evo2 = string.explode(evos[2], ',')
-		--local evo3 = string.explode(evos[3], ',')
 		evolution:getChildById("evo1"):getChildById("foto"):setItemId(tonumber(evo1[3]))
 		evolution:getChildById("evo1"):getChildById("foto"):setTooltip(evo1[1])
 		evolution:getChildById("evo1"):getChildById("level"):setText("Level: "..evo1[2])
@@ -647,7 +450,7 @@ function showPokemonPanel(buffer)
 			evolution:getChildById("evo2"):setMarginLeft(50)
 		else
 			evolution:getChildById("evo1"):setMarginLeft(0)
-			evolution:getChildById("evo2"):setMarginLeft(0)--evolutions height padrão 78 / evo2~evo3 height padrão 1(45)(79), 2(97)(131), 3(149)(183), 5(253)(287)
+			evolution:getChildById("evo2"):setMarginLeft(0)
 		end
 		adaptEvo2(evos[2])
 		if #evos >= 3 then
@@ -690,41 +493,14 @@ function showPokemonPanel(buffer)
 	end
 
 
-	if desc ~= "" then	--addAnchor(AnchorBottom, 'parent', AnchorBottom)
+	if desc ~= "" then
 		local descWindow = pokemonInfo:getChildById("description")
-		descWindow:getChildById("text"):setText(desc)
-		--print(desc)
-		--tab:setWidth(tab:getTextSize().width + tab:getPaddingLeft() + tab:getPaddingRight())
-		--descWindow:getChildById("text"):setWidth((descWindow:getChildById("text"):getTextSize().width + descWindow:getChildById("text"):getPaddingLeft() + descWindow:getChildById("text"):getPaddingRight()))
-		descWindow:getChildById("text"):setHeight((descWindow:getChildById("text"):getTextSize().height + descWindow:getChildById("text"):getPaddingLeft() + descWindow:getChildById("text"):getPaddingRight()))
-		--print((descWindow:getChildById("text"):getTextSize().height + descWindow:getChildById("text"):getPaddingLeft() + descWindow:getChildById("text"):getPaddingRight()))
-		--pokemonInfo:getChildById("description"):addAnchor(AnchorTop, 'evolutions', AnchorBottom)
-		--descriptionPanel = pokemonInfo:getChildById("description")
-		--str = str.."\n\nDescription: " .. desc
+		descWindow:getChildById("text"):setText(desc)descWindow:getChildById("text"):setHeight((descWindow:getChildById("text"):getTextSize().height + descWindow:getChildById("text"):getPaddingLeft() + descWindow:getChildById("text"):getPaddingRight()))
 	end
-
-
-	--[[	if evolutionsStr ~= "NOTHING" then
-			str = str.."\n\nEvolutions:"
-			local specials = {"Oddish", "Gloom", "Vileplume", "Bellossom", "Poliwag", "Poliwhirl", "Poliwrath", "Politoed", "Slowpoke", "Slowbro", "Slowking", "Tyrogue", "Hitmonlee", "Hitmonchan", "Hitmontop", "Eevee", "Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon"}
-			if not table.find(specials, name) then
-				local evos = string.explode(evolutionsStr, ';')
-				local evo1 = string.explode(evos[1], ',')
-				local evo2 = string.explode(evos[2], ',')
-				str = str.."\n" .. evo1[1] .. ", requires Level " .. evo1[2] .. "."
-				str = str.."\n" .. evo2[1] .. ", requires Level " .. evo2[2] .. "."
-				if #evos >= 3 then
-				local evo3 = string.explode(evos[3], ',')
-				str = str.."\n" .. evo3[1] .. ", requires Level " .. evo3[2] .. "."
-				end
-
-	evolution:getChildById("evo1"):]]
 	
 	elseif tab == "Moves" then
 		local receivedMove = string.explode(string.explode(downPanel, '@')[1], ';')
 		setPokedexMoves(receivedMove)
-		--local moveText = string.explode(buffer, '@')[2]
-		--pokemonMoves:getChildById('text'):setText(moveText)
 
 	elseif tab == "Stats" then
 		local attack = string.explode(downPanel, '|')[1]
@@ -807,7 +583,6 @@ end
 	return true
 end
 
-		--local evo2 = string.explode(evos[2], ',') / Wartortle,40,11068,1@Water Stone / Vaporeon,40,11068,1@Water Stone-Jolteon,40,11068,1@Thunder Stone
 function adaptEvo2(evo2String)
 	stones1otui = evolution:getChildById("stones1")
 	evo2otui = evolution:getChildById("evo2")
@@ -833,8 +608,6 @@ function adaptEvo2(evo2String)
 				stones1otui:getChildById("stone2"):setTooltip(stones[3])
 				stones1otui:getChildById("value2"):setText(stones[1])
 				stones1otui:getChildById("stone1"):setMarginLeft(0)
-			--	stones1otui:getChildById("stone1"):addAnchor(AnchorHorizontalCenter, "stones1", AnchorHorizontalCenter)
-				--evo2otui:getChildById("value1"):setVisible(true)
 				stones1otui:getChildById("stone2"):setVisible(true)
 				stones1otui:getChildById("value2"):setVisible(true)
 			else

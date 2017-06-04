@@ -404,6 +404,7 @@ locale = {
     ["Your connection has been lost. (err: %d)"] = "A sua conexão foi perdida. (err: %d)",
     ["Your Money"] = "Seu dinheiro",
 	["You are throwing a pokemon or a bag on the ground, are you sure?"] = "Tem certeza que deseja jogar seu Pokémon ou mochila no chão?",
+	["You are throwing #d diamond%s on the ground, are you sure?"] = "Tem certeza que deseja jogar %d Diamond%s no chão?",
 	["Attention"] = "Atenção",
   }
 }
