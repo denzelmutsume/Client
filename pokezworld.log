@@ -1,36 +1,1022 @@
-== application started at Jun 04 2017 02:53:53
+== application started at Jun 04 2017 12:29:25
 PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
-ERROR: Unable to load texture '/shaders/clouds.png': unable to open file '/shaders/clouds.png': O sistema não pode encontrar o caminho especificado.
-ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
-/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+1
+1
+1
+38
+1
+1
+ERROR: lua function callback failed: LUA ERROR:
+C++ call failed: Unable to login into a world while already online or logging.
 stack traceback:
 	[C]: ?
-	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
-	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
-	[C]: in function 'reloadModules'
-	/client_locales/locales.lua:45: in function 'selectFirstLocale'
-	/client_locales/locales.lua:29: in function </client_locales/locales.lua:29>
-ERROR: Unable to unload module 'game_questlog': LUA ERROR:
-/gamelib/protocolgame.lua:55: Opcode is not registered.
+	[C]: in function 'loginWorld'
+	/client_entergame/characterlist.lua:30: in function 'tryLogin'
+	/client_entergame/characterlist.lua:24: in function </client_entergame/characterlist.lua:24>
+ERROR: invalid slot
+stack traceback:
+at:
+	[C++]: LocalPlayer::setInventoryItem
+ERROR: ProtocolGame parse message exception (2093 bytes unread, last opcode is 39, prev opcode is 121): unhandled opcode 39
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
 stack traceback:
 	[C]: ?
-	[C]: in function 'error'
-	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
-	/game_questlog/questlog.lua:46: in function 'terminate'
-	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
-	[C]: in function 'reloadModules'
-	/client_locales/locales.lua:45: in function 'selectFirstLocale'
-	/client_locales/locales.lua:29: in function </client_locales/locales.lua:29>
-ERROR: Unable to unload module 'client_terminal': LUA ERROR:
-/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
 stack traceback:
 	[C]: ?
-	/client_terminal/terminal.lua:179: in function 'terminate'
-	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
-	[C]: in function 'reloadModules'
-	/client_locales/locales.lua:45: in function 'selectFirstLocale'
-	/client_locales/locales.lua:29: in function </client_locales/locales.lua:29>
-ERROR: Unable to load texture '/images/game/pokedex/moves_icon/Raging Blast_on.png': unable to open file '/images/game/pokedex/moves_icon/Raging Blast_on.png': O sistema não pode encontrar o caminho especificado.
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
 Exiting application..
 ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
 /mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
@@ -52,7 +1038,1334 @@ stack traceback:
 	[C]: ?
 	/client_terminal/terminal.lua:179: in function 'terminate'
 	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
-== application started at Jun 04 2017 02:56:41
+== application started at Jun 04 2017 18:12:41
 PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
-ERROR: Unable to load texture '/shaders/clouds.png': unable to open file '/shaders/clouds.png': O sistema não pode encontrar o caminho especificado.
-ERROR: Unable to load texture '/images/game/pokedex/moves_icon/Raging Blast_on.png': unable to open file '/images/game/pokedex/moves_icon/Raging Blast_on.png': O sistema não pode encontrar o caminho especificado.
+1
+1
+1
+1
+1
+38
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+ERROR: lua function callback failed: LUA ERROR:
+C++ call failed: Unable to login into a world while already online or logging.
+stack traceback:
+	[C]: ?
+	[C]: in function 'loginWorld'
+	/client_entergame/characterlist.lua:30: in function 'tryLogin'
+	/client_entergame/characterlist.lua:24: in function </client_entergame/characterlist.lua:24>
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+38
+1
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+38
+38
+1
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+38
+1
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+1
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+1
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+	[C]: in function 'close'
+	/game_containers/containers.lua:96: in function </game_containers/containers.lua:95>
+	[C]: in function 'pcall'
+	/corelib/util.lua:301: in function 'signalcall'
+	/corelib/ui/uiminiwindow.lua:27: in function 'close'
+	/corelib/ui/uiminiwindowcontainer.lua:81: in function 'fitAll'
+	/corelib/ui/uiminiwindow.lua:331: in function 'fitOnParent'
+	/corelib/ui/uiminiwindow.lua:138: in function 'setup'
+	/game_playertrade/playertrade.lua:29: in function 'createTrade'
+	/game_playertrade/playertrade.lua:34: in function 'fillTrade'
+	/game_playertrade/playertrade.lua:65: in function </game_playertrade/playertrade.lua:64>
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+1
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+WARNING: attempt to destroy widget 'lootWindow' two times
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 05 2017 22:07:22
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+1
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 06 2017 13:57:14
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+1
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+1
+1
+1
+1
+38
+1
+1
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 06 2017 15:49:17
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+38
+1
+1
+1
+1
+1
+1
+1
+ERROR: caught a lua call to a bot protected game function, the call was cancelled
+stack traceback:
+	[C]: ?
+	[C]: in function 'close'
+	/game_containers/containers.lua:96: in function </game_containers/containers.lua:95>
+	[C]: in function 'pcall'
+	/corelib/util.lua:301: in function 'signalcall'
+	/corelib/ui/uiminiwindow.lua:27: in function 'close'
+	/corelib/ui/uiminiwindowcontainer.lua:81: in function 'fitAll'
+	/corelib/ui/uiminiwindow.lua:331: in function 'fitOnParent'
+	/corelib/ui/uiminiwindow.lua:138: in function 'setup'
+	/game_playertrade/playertrade.lua:29: in function 'createTrade'
+	/game_playertrade/playertrade.lua:34: in function 'fillTrade'
+	/game_playertrade/playertrade.lua:65: in function </game_playertrade/playertrade.lua:64>
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+WARNING: attempt to destroy widget 'lootWindow' two times
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 07 2017 02:43:45
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+1
+38
+1
+ERROR: invalid slot
+at:
+	[C++]: LocalPlayer::setInventoryItem
+ERROR: ProtocolGame parse message exception (2093 bytes unread, last opcode is 39, prev opcode is 121): unhandled opcode 39
+ERROR: invalid slot
+at:
+	[C++]: LocalPlayer::setInventoryItem
+ERROR: ProtocolGame parse message exception (2093 bytes unread, last opcode is 39, prev opcode is 121): unhandled opcode 39
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 08 2017 05:16:12
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 08 2017 08:38:32
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+38
+1
+1
+38
+ERROR: invalid slot
+at:
+	[C++]: LocalPlayer::setInventoryItem
+ERROR: ProtocolGame parse message exception (2093 bytes unread, last opcode is 39, prev opcode is 121): unhandled opcode 39
+1
+1
+38
+1
+== application started at Jun 11 2017 08:50:33
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+1
+== application started at Jun 11 2017 20:13:46
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+38
+1
+1
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+38
+== application started at Jun 13 2017 16:12:39
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+1
+1
+1
+1
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+1
+1
+1
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 14 2017 22:01:07
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+1
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+1
+1
+1
+== application started at Jun 15 2017 14:29:32
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+== application started at Jun 16 2017 00:43:02
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+38
+1
+ERROR: invalid slot
+at:
+	[C++]: LocalPlayer::setInventoryItem
+ERROR: ProtocolGame parse message exception (2093 bytes unread, last opcode is 39, prev opcode is 121): unhandled opcode 39
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+1
+1
+38
+1
+ERROR: protected lua call failed: LUA ERROR:
+/game_pokemon/pokemon.lua:156: attempt to index field '?' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_pokemon/pokemon.lua:156: in function 'toggleIcon'
+	/game_pokemon/pokemon.lua:269: in function </game_pokemon/pokemon.lua:260>
+ERROR: protected lua call failed: LUA ERROR:
+/game_pokemon/pokemon.lua:156: attempt to index field '?' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_pokemon/pokemon.lua:156: in function 'toggleIcon'
+	/game_pokemon/pokemon.lua:269: in function </game_pokemon/pokemon.lua:260>
+ERROR: protected lua call failed: LUA ERROR:
+/game_pokemon/pokemon.lua:156: attempt to index field '?' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_pokemon/pokemon.lua:156: in function 'toggleIcon'
+	/game_pokemon/pokemon.lua:269: in function </game_pokemon/pokemon.lua:260>
+ERROR: protected lua call failed: LUA ERROR:
+/game_pokemon/pokemon.lua:156: attempt to index field '?' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_pokemon/pokemon.lua:156: in function 'toggleIcon'
+	/game_pokemon/pokemon.lua:269: in function </game_pokemon/pokemon.lua:260>
+1
+ERROR: invalid slot
+at:
+	[C++]: LocalPlayer::setInventoryItem
+ERROR: ProtocolGame parse message exception (2093 bytes unread, last opcode is 39, prev opcode is 121): unhandled opcode 39
+== application started at Jun 18 2017 20:47:03
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+1
+== application started at Jun 19 2017 21:02:01
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+WARNING: attempt to destroy widget 'lootWindow' two times
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 20 2017 13:08:05
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 20 2017 16:02:26
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 20 2017 20:43:49
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 21 2017 14:33:01
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+ERROR: invalid slot
+at:
+	[C++]: LocalPlayer::setInventoryItem
+ERROR: ProtocolGame parse message exception (2093 bytes unread, last opcode is 39, prev opcode is 121): unhandled opcode 39
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+WARNING: attempt to destroy widget 'lootWindow' two times
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 21 2017 22:03:21
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+ERROR: invalid encrypted network message
+at:
+	[C++]: Protocol::xteaDecrypt
+ERROR: failed to decrypt message
+at:
+	[C++]: Protocol::internalRecvData
+== application started at Jun 26 2017 22:14:57
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+1
+1
+1
+38
+38
+1
+== application started at Jun 28 2017 16:00:15
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+WARNING: attempt to destroy widget 'lootWindow' two times
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+38
+1
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+WARNING: attempt to destroy widget 'lootWindow' two times
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jun 30 2017 21:44:15
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 01 2017 23:59:53
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 02 2017 21:46:07
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+== application started at Jul 03 2017 13:26:45
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+== application started at Jul 04 2017 05:05:04
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+1
+38
+38
+1
+38
+1
+1
+1
+1
+1
+1
+1
+ERROR: invalid slot
+at:
+	[C++]: LocalPlayer::setInventoryItem
+ERROR: ProtocolGame parse message exception (2093 bytes unread, last opcode is 39, prev opcode is 121): unhandled opcode 39
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+WARNING: attempt to destroy widget 'lootWindow' two times
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 06 2017 18:14:25
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 07 2017 09:16:48
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+38
+1
+1
+1
+ERROR: protected lua call failed: LUA ERROR:
+/game_pokemon/pokemon.lua:156: attempt to index field '?' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_pokemon/pokemon.lua:156: in function 'toggleIcon'
+	/game_pokemon/pokemon.lua:269: in function </game_pokemon/pokemon.lua:260>
+ERROR: protected lua call failed: LUA ERROR:
+/game_pokemon/pokemon.lua:156: attempt to index field '?' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_pokemon/pokemon.lua:156: in function 'toggleIcon'
+	/game_pokemon/pokemon.lua:269: in function </game_pokemon/pokemon.lua:260>
+ERROR: protected lua call failed: LUA ERROR:
+/game_pokemon/pokemon.lua:156: attempt to index field '?' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_pokemon/pokemon.lua:156: in function 'toggleIcon'
+	/game_pokemon/pokemon.lua:269: in function </game_pokemon/pokemon.lua:260>
+ERROR: protected lua call failed: LUA ERROR:
+/game_pokemon/pokemon.lua:156: attempt to index field '?' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_pokemon/pokemon.lua:156: in function 'toggleIcon'
+	/game_pokemon/pokemon.lua:269: in function </game_pokemon/pokemon.lua:260>
+ERROR: protected lua call failed: LUA ERROR:
+/game_pokemon/pokemon.lua:156: attempt to index field '?' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_pokemon/pokemon.lua:156: in function 'toggleIcon'
+	/game_pokemon/pokemon.lua:269: in function </game_pokemon/pokemon.lua:260>
+ERROR: protected lua call failed: LUA ERROR:
+/game_pokemon/pokemon.lua:156: attempt to index field '?' (a nil value)
+stack traceback:
+	[C]: ?
+	/game_pokemon/pokemon.lua:156: in function 'toggleIcon'
+	/game_pokemon/pokemon.lua:269: in function </game_pokemon/pokemon.lua:260>
+1
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+WARNING: attempt to destroy widget 'lootWindow' two times
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 07 2017 10:08:34
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+1
+1
+WARNING: message in channel id 5 which is unknown, this is a server bug, relogin if you want to see messages in this channel
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+WARNING: attempt to destroy widget 'lootWindow' two times
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 08 2017 23:25:36
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 09 2017 21:17:54
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+== application started at Jul 10 2017 02:04:25
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 10 2017 20:56:12
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 11 2017 15:26:22
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 13 2017 20:07:36
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+== application started at Jul 15 2017 15:38:15
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 18 2017 08:12:12
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 18 2017 09:52:09
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 18 2017 13:02:48
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86
+Exiting application..
+ERROR: Unable to unload module 'mod_topMenu': LUA ERROR:
+/mod_topMenu/mod_topMenu.lua:36: attempt to index upvalue 'duelIcon' (a nil value)
+stack traceback:
+	[C]: ?
+	/mod_topMenu/mod_topMenu.lua:36: in function 'terminate'
+	/mod_topMenu/mod_topMenu.otmod:13:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'game_questlog': LUA ERROR:
+/gamelib/protocolgame.lua:55: Opcode is not registered.
+stack traceback:
+	[C]: ?
+	[C]: in function 'error'
+	/gamelib/protocolgame.lua:55: in function 'unregisterExtendedOpcode'
+	/game_questlog/questlog.lua:46: in function 'terminate'
+	/game_questlog/questlog.otmod:9:[@onUnload]:1: in main chunk
+ERROR: Unable to unload module 'client_terminal': LUA ERROR:
+/client_terminal/terminal.lua:179: attempt to index upvalue 'terminalButton' (a nil value)
+stack traceback:
+	[C]: ?
+	/client_terminal/terminal.lua:179: in function 'terminate'
+	/client_terminal/terminal.otmod:9:[@onUnload]:1: in main chunk
+== application started at Jul 22 2017 07:19:54
+PokeZWorld 0.26 rev 0 (devel) built on May 29 2017 for arch x86

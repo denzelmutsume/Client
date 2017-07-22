@@ -128,7 +128,7 @@ function EnterGame.init()
     enterGame:show()
   end
 
-server = "pokezworld.com"
+server = "158.69.12.112"
 EnterGame.setUniqueServer(server, 7171, 854, 270, 210)
 end
 
