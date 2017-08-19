@@ -25,7 +25,7 @@ function onGameEnd()
 end
 
 function show(ver, msg)
-if tonumber(ver) <= 260 then
+if tonumber(ver) <= 261 then
 hide()
 return true
 end
