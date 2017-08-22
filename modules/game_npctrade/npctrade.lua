@@ -1,6 +1,6 @@
 BUY = 1
 SELL = 2
-CURRENCY = 'gold'
+CURRENCY = '$'
 CURRENCY_DECIMAL = false
 WEIGHT_UNIT = 'oz'
 LAST_INVENTORY = 10
@@ -25,7 +25,7 @@ buyTab = nil
 sellTab = nil
 initialized = false
 
-showWeight = true
+showWeight = false
 buyWithBackpack = nil
 ignoreCapacity = nil
 ignoreEquipped = nil
@@ -52,14 +52,14 @@ function init()
   nameLabel = setupPanel:getChildById('name')
   priceLabel = setupPanel:getChildById('price')
   moneyLabel = setupPanel:getChildById('money')
-  weightDesc = setupPanel:getChildById('weightDesc')
+  tradeButton = npcWindow:recursiveGetChildById('tradeButton')
+  --[[weightDesc = setupPanel:getChildById('weightDesc')
   weightLabel = setupPanel:getChildById('weight')
   capacityDesc = setupPanel:getChildById('capacityDesc')
   capacityLabel = setupPanel:getChildById('capacity')
-  tradeButton = npcWindow:recursiveGetChildById('tradeButton')
-
+  
   buyWithBackpack = npcWindow:recursiveGetChildById('buyWithBackpack')
-  ignoreCapacity = npcWindow:recursiveGetChildById('ignoreCapacity')
+  ignoreCapacity = npcWindow:recursiveGetChildById('ignoreCapacity')]]
   ignoreEquipped = npcWindow:recursiveGetChildById('ignoreEquipped')
   showAllItems = npcWindow:recursiveGetChildById('showAllItems')
   sellAllButton = npcWindow:recursiveGetChildById('sellAllButton')
@@ -136,8 +136,8 @@ end
 
 function onQuantityValueChange(quantity)
   if selectedItem then
-    weightLabel:setText(string.format('%.2f', selectedItem.weight*quantity) .. ' ' .. WEIGHT_UNIT)
-    priceLabel:setText(formatCurrency(getItemPrice(selectedItem)))
+--    weightLabel:setText(string.format('%.2f', selectedItem.weight*quantity) .. ' ' .. WEIGHT_UNIT)
+    priceLabel:setText(formatCurrency(getItemPrice(selectedItem)/100))
   end
 end
 
@@ -147,8 +147,8 @@ function onTradeTypeChange(radioTabs, selected, deselected)
   deselected:setOn(false)
 
   local currentTradeType = getCurrentTradeType()
-  buyWithBackpack:setVisible(currentTradeType == BUY)
-  ignoreCapacity:setVisible(currentTradeType == BUY)
+ --[[ buyWithBackpack:setVisible(currentTradeType == BUY)
+  ignoreCapacity:setVisible(currentTradeType == BUY)]]
   ignoreEquipped:setVisible(currentTradeType == SELL)
   showAllItems:setVisible(currentTradeType == SELL)
   sellAllButton:setVisible(currentTradeType == SELL)
@@ -159,7 +159,7 @@ end
 
 function onTradeClick()
   if getCurrentTradeType() == BUY then
-    g_game.buyItem(selectedItem.ptr, quantityScroll:getValue(), ignoreCapacity:isChecked(), buyWithBackpack:isChecked())
+    g_game.buyItem(selectedItem.ptr, quantityScroll:getValue())
   else
     g_game.sellItem(selectedItem.ptr, quantityScroll:getValue(), ignoreEquipped:isChecked())
   end
@@ -214,19 +214,19 @@ end
 
 function setShowWeight(state)
   showWeight = state
-  weightDesc:setVisible(state)
-  weightLabel:setVisible(state)
+ --[[ weightDesc:setVisible(state)
+  weightLabel:setVisible(state)]]
 end
 
 function setShowYourCapacity(state)
-  capacityDesc:setVisible(state)
+ --[[ capacityDesc:setVisible(state)
   capacityLabel:setVisible(state)
-  ignoreCapacity:setVisible(state)
+  ignoreCapacity:setVisible(state)]]
 end
 
 function clearSelectedItem()
   nameLabel:clearText()
-  weightLabel:clearText()
+ -- weightLabel:clearText()
   priceLabel:clearText()
   tradeButton:disable()
   quantityScroll:setMinimum(0)
@@ -251,7 +251,7 @@ function getItemPrice(item, single)
   if not single then
     amount = quantityScroll:getValue()
   end
-  if getCurrentTradeType() == BUY then
+  --[[if getCurrentTradeType() == BUY then
     if buyWithBackpack:isChecked() then
       if item.ptr:isStackable() then
           return item.price*amount + 20
@@ -259,7 +259,7 @@ function getItemPrice(item, single)
         return item.price*amount + math.ceil(amount/20)*20
       end
     end
-  end
+  end]]
   return item.price*amount
 end
 
@@ -280,7 +280,7 @@ end
 
 function canTradeItem(item)
   if getCurrentTradeType() == BUY then
-    return (ignoreCapacity:isChecked() or (not ignoreCapacity:isChecked() and playerFreeCapacity >= item.weight)) and playerMoney >= getItemPrice(item, true)
+    return true --(ignoreCapacity:isChecked() or (not ignoreCapacity:isChecked() and playerFreeCapacity >= item.weight)) and playerMoney >= getItemPrice(item, true)
   else
     return getSellQuantity(item.ptr) > 0
   end
@@ -288,14 +288,14 @@ end
 
 function refreshItem(item)
   nameLabel:setText(item.name)
-  weightLabel:setText(string.format('%.2f', item.weight) .. ' ' .. WEIGHT_UNIT)
-  priceLabel:setText(formatCurrency(getItemPrice(item)))
+ -- weightLabel:setText(string.format('%.2f', item.weight) .. ' ' .. WEIGHT_UNIT)
+  priceLabel:setText(formatCurrency(getItemPrice(item)/100))
 
   if getCurrentTradeType() == BUY then
     local capacityMaxCount = math.floor(playerFreeCapacity / item.weight)
-    if ignoreCapacity:isChecked() then
+    --[[if ignoreCapacity:isChecked() then
       capacityMaxCount = 65535
-    end
+    end]]
     local priceMaxCount = math.floor(playerMoney / getItemPrice(item, true))
     local finalCount = math.max(0, math.min(getMaxAmount(), math.min(priceMaxCount, capacityMaxCount)))
     quantityScroll:setMinimum(1)
@@ -335,7 +335,7 @@ function refreshTradeItems()
       local weight = string.format('%.2f', item.weight) .. ' ' .. WEIGHT_UNIT
       text = text .. '\n' .. weight
     end
-    local price = formatCurrency(item.price)
+    local price = formatCurrency(item.price/100)
     text = text .. '\n' .. price
     itemBox:setText(text)
 
@@ -355,8 +355,8 @@ function refreshPlayerGoods()
 
   checkSellAllTooltip()
 
-  moneyLabel:setText(formatCurrency(playerMoney))
-  capacityLabel:setText(string.format('%.2f', playerFreeCapacity) .. ' ' .. WEIGHT_UNIT)
+  moneyLabel:setText(formatCurrency(playerMoney/100))
+  --capacityLabel:setText(string.format('%.2f', playerFreeCapacity) .. ' ' .. WEIGHT_UNIT)
 
   local currentTradeType = getCurrentTradeType()
   local searchFilter = searchText:getText():lower()
@@ -493,8 +493,8 @@ function checkSellAllTooltip()
         if data and amount > 0 then
           info = info..(not first and "\n" or "")..
                  amount.." "..
-                 data.name.." ("..
-                 data.price*amount.." gold)"
+                 data.name.." ($"..
+                 (data.price/100)*amount..")"
 
           total = total+(data.price*amount)
           if first then first = false end
@@ -503,7 +503,7 @@ function checkSellAllTooltip()
     end
   end
   if info ~= '' then
-    info = info.."\nTotal: "..total.." gold"
+    info = info.."\nTotal: $"..(total/100)
     sellAllButton:setTooltip(info)
   else
     sellAllButton:setEnabled(false)
@@ -512,9 +512,9 @@ end
 
 function formatCurrency(amount)
   if CURRENCY_DECIMAL then
-    return string.format("%.02f", amount/100.0) .. ' ' .. CURRENCY
+    return CURRENCY .. '' .. string.format("%.02f", amount/100.0)
   else
-    return amount .. ' ' .. CURRENCY
+    return CURRENCY .. '' .. amount
   end
 end
 

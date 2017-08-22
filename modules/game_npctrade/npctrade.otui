@@ -17,7 +17,7 @@ NPCItemBox < UICheckBox
     phantom: true
     anchors.top: parent.top
     anchors.horizontalCenter: parent.horizontalCenter
-    image-color: #ffffffff
+    image-color: alpha
     margin-top: 5
 
   $checked on:
@@ -33,7 +33,7 @@ NPCItemBox < UICheckBox
 MainWindow
   id: npcWindow
   !text: tr('NPC Trade')
-  size: 550 515
+  size: 542 460
   @onEscape: modules.game_npctrade.closeNpcTrade()
 
   TabButton
@@ -81,11 +81,12 @@ MainWindow
       anchors.top: parent.top
       anchors.bottom: parent.bottom
       vertical-scrollbar: itemsPanelListScrollBar
-      margin-left: 5
-      margin-right: 5
+      margin-left: 4
+      margin-top: 4
+      margin-right: 4
       layout:
         type: grid
-        cell-size: 160 90
+        cell-size: 160 75
         flow: true
         auto-spacing: true
 
@@ -133,30 +134,6 @@ MainWindow
     NPCOfferLabel
       id: money
 
-    Label
-      id: weightDesc
-      !text: tr('Weight') .. ':'
-      anchors.left: parent.left
-      anchors.top: prev.bottom
-      margin-top: 5
-      margin-left: 5
-      width: 85
-
-    NPCOfferLabel
-      id: weight
-
-    Label
-      id: capacityDesc
-      !text: tr('Your Capacity') .. ':'
-      anchors.left: parent.left
-      anchors.top: prev.bottom
-      margin-top: 5
-      margin-left: 5
-      width: 85
-
-    NPCOfferLabel
-      id: capacity
-
     HorizontalScrollBar
       id: quantityScroll
       anchors.left: parent.left
@@ -200,26 +177,6 @@ MainWindow
       @onTextChange: modules.game_npctrade.onSearchTextChange()
 
     CheckBox
-      id: buyWithBackpack
-      !text: tr('Buy with backpack')
-      anchors.top: searchText.bottom
-      anchors.left: parent.left
-      anchors.right: parent.right
-      margin-left: 5
-      margin-top: 5
-      @onCheckChange: modules.game_npctrade.onBuyWithBackpackChange()
-
-    CheckBox
-      id: ignoreCapacity
-      !text: tr('Ignore capacity')
-      anchors.top: prev.bottom
-      anchors.left: parent.left
-      anchors.right: parent.right
-      margin-left: 5
-      margin-top: 5
-      @onCheckChange: modules.game_npctrade.onIgnoreCapacityChange()
-
-    CheckBox
       id: ignoreEquipped
       !text: tr('Ignore equipped')
       anchors.top: searchText.bottom
@@ -245,7 +202,7 @@ MainWindow
 
   Button
     id: sellAllButton
-    !text: tr('Sell All')
+    !text: 'Sell All'
     width: 64
     anchors.right: next.left
     anchors.bottom: parent.bottom
